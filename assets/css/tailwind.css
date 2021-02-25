@@ -1,9 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@900&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+* {
+    font-family: "poppins", sans-serif;
+}
+  
+  nav * {
+    font-family: "roboto", sans-serif;
+  }
+  
+.packet-content h2 {
+    @apply font-bold text-lg md:text-2xl;
+}
+  
 @layer components {
-    .btn-blue {
-        @apply py-2 px-4 bg-blue-500 text-white font-semibold rounded-lg shadow-md hover:bg-red-700 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-75;
+    @responsive {
+        .h-nav {
+            height: 4.375rem;
+        }
+        .w--30 {
+            width: 30.5rem;
+        }
+        .h--30 {
+            height: 39.1rem;
+        }
+        .w--price {
+            width: 50.5rem;
+        }
+        .h--price {
+            height: 55.1rem;
+        }
+        .w--price-photo {
+            width: 34.375rem;
+        }
+        .h--price-photo {
+            height: 33.403125rem;
+        }
+        .h--gallery-item {
+            height: 350px;
+        }
+        .w--gallery-item {
+            width: 400px;
+        }
+        .w--packet-photo {
+            width: 100rem;
+        }
+        .h--packet-photo {
+            height: 35rem;
+        }
     }
 }
