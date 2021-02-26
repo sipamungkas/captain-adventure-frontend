@@ -12,6 +12,14 @@ nav * {
 }
 
 @layer components {
+  .nav .nuxt-link-active {
+    @apply rounded-b-3xl bg-white text-yellow-900 font-bold px-2;
+  }
+
+  .mobile-nav .nuxt-link-active {
+    @apply bg-white text-yellow-900 font-bold px-2;
+  }
+
   @responsive {
     .h-screen-80 {
       height: 80vh;
