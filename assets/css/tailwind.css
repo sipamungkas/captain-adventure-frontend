@@ -57,5 +57,8 @@ nav * {
     .h--packet-photo {
       height: 35rem;
     }
+    .h--category-lg {
+      width: 30.5rem;
+    }
   }
 }
