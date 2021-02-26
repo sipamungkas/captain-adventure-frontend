@@ -12,7 +12,7 @@
             <li class="nav">
               <NuxtLink
                 class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
-                to="/index"
+                to="/home"
                 >Home</NuxtLink
               >
             </li>
@@ -89,7 +89,7 @@
           <ul class="flex flex-col pb-4">
             <li class="">
               <NuxtLink
-                to="/index"
+                to="/home"
                 class="h-14 flex justify-start items-center text-white text-xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2 w-full"
                 >Home</NuxtLink
               >
