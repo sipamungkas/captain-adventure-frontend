@@ -1,50 +1,53 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@900&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Roboto:wght@900&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 * {
-    font-family: "poppins", sans-serif;
+  font-family: 'poppins', sans-serif;
 }
-  
-  nav * {
-    font-family: "roboto", sans-serif;
-  }
-  
+
+nav * {
+  font-family: 'roboto', sans-serif;
+}
+
 @layer components {
-    @responsive {
-        .h-nav {
-            height: 4.375rem;
-        }
-        .w--30 {
-            width: 30.5rem;
-        }
-        .h--30 {
-            height: 39.1rem;
-        }
-        .w--price {
-            width: 50.5rem;
-        }
-        .h--price {
-            height: 55.1rem;
-        }
-        .w--price-photo {
-            width: 34.375rem;
-        }
-        .h--price-photo {
-            height: 33.403125rem;
-        }
-        .h--gallery-item {
-            height: 350px;
-        }
-        .w--gallery-item {
-            width: 400px;
-        }
-        .w--packet-photo {
-            width: 100rem;
-        }
-        .h--packet-photo {
-            height: 35rem;
-        }
+  @responsive {
+    .h-screen-80 {
+      height: 80vh;
     }
+    .h-nav {
+      height: 4.375rem;
+    }
+    .w--30 {
+      width: 30.5rem;
+    }
+    .h--30 {
+      height: 39.1rem;
+    }
+    .w--price {
+      width: 50.5rem;
+    }
+    .h--price {
+      height: 55.1rem;
+    }
+    .w--price-photo {
+      width: 34.375rem;
+    }
+    .h--price-photo {
+      height: 33.403125rem;
+    }
+    .h--gallery-item {
+      height: 350px;
+    }
+    .w--gallery-item {
+      width: 400px;
+    }
+    .w--packet-photo {
+      width: 100rem;
+    }
+    .h--packet-photo {
+      height: 35rem;
+    }
+  }
 }
