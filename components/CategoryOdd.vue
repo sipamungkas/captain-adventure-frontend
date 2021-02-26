@@ -24,13 +24,13 @@
             <p class="font-medium text-medium lg:text-xl">3 Paket</p>
           </div>
           <div class="category-cta">
-            <a href="price-packet.html"
+            <NuxtLink to="/price/category"
               ><button
                 class="px-6 py-3 md:px-8 md:py-4 bg-yellow-400 rounded-lg font-semibold text-lg"
               >
                 Detail
               </button>
-            </a>
+            </NuxtLink>
           </div>
         </div>
       </div>

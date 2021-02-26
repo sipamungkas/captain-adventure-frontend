@@ -3,7 +3,7 @@
     <nav class="h-nav container mx-auto">
       <div class="h-nav flex items-center justify-between px-4">
         <div class="w-10 py-2 md:py-0 md:w-16 flex items-center">
-          <a href="#"></a><img src="icon.png" alt="" />
+          <a href="#"><img src="icon.png" alt="" /></a>
         </div>
         <div class="w-auto">
           <ul
