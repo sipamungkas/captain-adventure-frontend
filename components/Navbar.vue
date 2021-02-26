@@ -7,44 +7,59 @@
         </div>
         <div class="w-auto">
           <ul
-            class="fixed inset-0 flex flex-row invisible lg:visible lg:relative"
+            class="fixed inset-0 flex flex-row invisible lg:visible lg:relative text-white"
           >
-            <li
-              class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-white text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
-            >
-              <NuxtLink to="/index">Home</NuxtLink>
+            <li class="nav">
+              <NuxtLink
+                class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                to="/index"
+                >Home</NuxtLink
+              >
             </li>
-            <li
-              class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-white text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
-            >
-              <NuxtLink to="/price">Price</NuxtLink>
+            <li class="nav">
+              <NuxtLink
+                class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                to="/price"
+                >Price</NuxtLink
+              >
             </li>
-            <li
-              class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-white text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
-            >
-              <NuxtLink to="/about">About</NuxtLink>
+            <li class="nav">
+              <NuxtLink
+                class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                to="/about"
+                >About</NuxtLink
+              >
             </li>
-            <li
-              class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-white text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
-            >
-              <NuxtLink to="/contact">Contact</NuxtLink>
+            <li class="nav">
+              <NuxtLink
+                class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                to="/contact"
+                >Contact</NuxtLink
+              >
             </li>
-            <li
-              class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-white text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
-            >
-              <NuxtLink to="/gallery">Gallery</NuxtLink>
+            <li class="nav">
+              <NuxtLink
+                class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                to="/gallery"
+                >Gallery</NuxtLink
+              >
             </li>
-            <li
-              class="h-nav w-20 flex items-center justify-center py-6 md:py-0 text-white text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
-            >
-              <NuxtLink to="/blog">Blog</NuxtLink>
+            <li class="nav">
+              <NuxtLink
+                class="h-nav w-20 flex items-center justify-center py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                to="/blog"
+                >Blog</NuxtLink
+              >
             </li>
           </ul>
         </div>
         <div class="w-auto lg:absolute">
           <ul class="flex items-center">
             <li class="block lg:hidden">
-              <button class="relative flex items-center">
+              <button
+                class="relative flex items-center mobile-nav-cta"
+                @click="toggleGaes"
+              >
                 <svg
                   width="24"
                   height="22"
@@ -65,7 +80,71 @@
         </div>
       </div>
     </nav>
+    <div
+      class="mobile-nav w-full h-screen invisible lg:invisible bg-gray-800 bg-opacity-44 transition-shadow"
+      @click="toggleGaes"
+    >
+      <div class="w-full bg-yellow-900 z-50">
+        <nav>
+          <ul class="flex flex-col pb-4">
+            <li class="">
+              <NuxtLink
+                to="/index"
+                class="h-14 flex justify-start items-center text-white text-xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2 w-full"
+                >Home</NuxtLink
+              >
+            </li>
+            <li class="">
+              <NuxtLink
+                to="/price"
+                class="h-14 flex justify-start items-center text-white text-xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2 w-full"
+                >Price</NuxtLink
+              >
+            </li>
+            <li class="">
+              <NuxtLink
+                to="/about"
+                class="h-14 flex justify-start items-center text-white text-xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2 w-full"
+                >About</NuxtLink
+              >
+            </li>
+            <li class="">
+              <NuxtLink
+                to="/contact"
+                class="h-14 flex justify-start items-center text-white text-xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2 w-full"
+                >Contact</NuxtLink
+              >
+            </li>
+            <li class="">
+              <NuxtLink
+                to="/gallery"
+                class="h-14 flex justify-start items-center text-white text-xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2 w-full"
+                >Gallery</NuxtLink
+              >
+            </li>
+            <li class="">
+              <NuxtLink
+                to="/blog"
+                class="h-14 flex justify-start items-center text-white text-xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2 w-full"
+                >Blog</NuxtLink
+              >
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
   </header>
 </template>
+
+<script>
+export default {
+  methods: {
+    toggleGaes() {
+      const el = document.querySelector('.mobile-nav')
+      el.classList.toggle('invisible')
+    },
+  },
+}
+</script>
 
 <style></style>
