@@ -12,32 +12,32 @@
             <li
               class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-white text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
             >
-              <a href="index.html">Home</a>
+              <NuxtLink to="/index">Home</NuxtLink>
             </li>
             <li
               class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-white text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
             >
-              <a href="price.html">Price</a>
+              <NuxtLink to="/price">Price</NuxtLink>
             </li>
             <li
               class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-white text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
             >
-              <a href="about.html">About</a>
+              <NuxtLink to="/about">About</NuxtLink>
             </li>
             <li
               class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-white text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
             >
-              <a href="contact.html">Contact</a>
+              <NuxtLink to="/contact">Contact</NuxtLink>
             </li>
             <li
               class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-white text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
             >
-              <a href="gallery.html">Gallery</a>
+              <NuxtLink to="/gallery">Gallery</NuxtLink>
             </li>
             <li
               class="h-nav w-20 flex items-center justify-center py-6 md:py-0 text-white text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
             >
-              <a href="blog.html">Blog</a>
+              <NuxtLink to="/blog">Blog</NuxtLink>
             </li>
           </ul>
         </div>

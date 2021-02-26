@@ -1,6 +1,14 @@
 <template>
   <div>
-    <Herotest />
+    <Hero />
+
+    <Program />
+
+    <div class="w-full">
+      <div class="container mx-auto">
+        <Offers />
+      </div>
+    </div>
   </div>
 </template>
 

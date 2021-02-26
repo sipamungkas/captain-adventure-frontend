@@ -7,9 +7,10 @@
     <div class="swiper-wrapper">
       <div v-for="banner in banners" :key="banner" class="swiper-slide">
         <!-- Render original HTML in server, render Swiper in browser (client) -->
-        <img class="h-64 w-64" :src="banner" />
+        <img class="w-full" src="~/assets/images/Hero1.jpg" />
       </div>
     </div>
+    <div slot="pagination" class="swiper-pagination"></div>
     <div slot="button-prev" class="swiper-button-prev"></div>
     <div slot="button-next" class="swiper-button-next"></div>
   </div>
@@ -25,7 +26,11 @@ export default {
   },
   data() {
     return {
-      banners: ['/Hero1.png', '/Mobil.png', '/Hero.png'],
+      banners: [
+        '~/assets/images/Hero1.jpg',
+        '~/assets/images/Mobil.jpg',
+        '~/assets/images/Hero.jpg',
+      ],
       swiperOption: {
         slidesPerView: 3,
         spaceBetween: -10,
