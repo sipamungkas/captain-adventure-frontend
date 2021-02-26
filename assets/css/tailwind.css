@@ -12,6 +12,12 @@ nav * {
 }
 
 @layer components {
+  .packet-content h1 {
+    @apply font-bold text-lg;
+  }
+  .packet-content h2 {
+    @apply font-bold text-base;
+  }
   .nav .nuxt-link-active {
     @apply rounded-b-3xl bg-white text-yellow-900 font-bold px-2;
   }
