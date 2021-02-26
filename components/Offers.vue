@@ -21,7 +21,7 @@
                 <img
                   width="40%"
                   height="40%"
-                  src=" ../assets/icon/Icon Smile.png"
+                  src="~/assets/icons/Icon Smile.png"
                 />
                 <h5 class="mt-4 font-medium">Kebahagiaan</h5>
               </div>
@@ -40,7 +40,7 @@
                 <img
                   width="40%"
                   height="40%"
-                  src=" ../assets/icon/Icon Teman.png"
+                  src="~/assets/icons/Icon Teman.png"
                 />
                 <h5 class="mt-4 font-medium">Teman</h5>
               </div>
@@ -59,7 +59,7 @@
                 <img
                   width="40%"
                   height="40%"
-                  src=" ../assets/icon/Icon Pengalaman.png"
+                  src="~/assets/icons/Icon Pengalaman.png"
                 />
                 <h5 class="mt-4 font-medium">Pengalaman</h5>
               </div>
@@ -78,7 +78,7 @@
                 <img
                   width="40%"
                   height="40%"
-                  src=" ../assets/icon/Icon Dokumentasi.png"
+                  src="~/assets/icons/Icon Dokumentasi.png"
                 />
                 <h5 class="mt-4 font-medium">Dokumentasi</h5>
               </div>
@@ -97,7 +97,7 @@
                 <img
                   width="40%"
                   height="40%"
-                  src=" ../assets/icon/Icon Makan.png"
+                  src="~/assets/icons/Icon Makan.png"
                 />
                 <h5 class="mt-4 font-medium">Makan & Minum</h5>
               </div>
@@ -116,7 +116,7 @@
                 <img
                   width="40%"
                   height="40%"
-                  src=" ../assets/icon/Icon Pengetahuan(1).png"
+                  src="~/assets/icons/Icon Pengetahuan(1).png"
                 />
                 <h5 class="mt-4 font-medium">Pengetahuan</h5>
               </div>

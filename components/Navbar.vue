@@ -11,42 +11,42 @@
           >
             <li class="nav">
               <NuxtLink
-                class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                class="h-nav w-24 flex items-center justify-center mr-6 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
                 to="/home"
                 >Home</NuxtLink
               >
             </li>
             <li class="nav">
               <NuxtLink
-                class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                class="h-nav w-24 flex items-center justify-center mr-6 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
                 to="/price"
                 >Price</NuxtLink
               >
             </li>
             <li class="nav">
               <NuxtLink
-                class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                class="h-nav w-24 flex items-center justify-center mr-6 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
                 to="/about"
                 >About</NuxtLink
               >
             </li>
             <li class="nav">
               <NuxtLink
-                class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                class="h-nav w-24 flex items-center justify-center mr-6 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
                 to="/contact"
                 >Contact</NuxtLink
               >
             </li>
             <li class="nav">
               <NuxtLink
-                class="h-nav w-20 flex items-center justify-center mr-10 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                class="h-nav w-24 flex items-center justify-center mr-6 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
                 to="/gallery"
                 >Gallery</NuxtLink
               >
             </li>
             <li class="nav">
               <NuxtLink
-                class="h-nav w-20 flex items-center justify-center py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                class="h-nav w-24 flex items-center justify-center py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
                 to="/blog"
                 >Blog</NuxtLink
               >
@@ -81,7 +81,7 @@
       </div>
     </nav>
     <div
-      class="mobile-nav w-full h-screen invisible lg:invisible bg-gray-800 bg-opacity-44 transition-shadow"
+      class="mobile-nav w-full lg:h-full invisible lg:invisible bg-gray-800 bg-opacity-44 transition-shadow"
       @click="toggleGaes"
     >
       <div class="w-full bg-yellow-900 z-50">
