@@ -1,5 +1,5 @@
 <template>
-  <div class="category-contents">
+  <div class="price-contents">
     <section class="w-full">
       <Category />
     </section>
