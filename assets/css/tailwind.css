@@ -11,10 +11,6 @@
     font-family: "roboto", sans-serif;
   }
   
-.packet-content h2 {
-    @apply font-bold text-lg md:text-2xl;
-}
-  
 @layer components {
     @responsive {
         .h-nav {

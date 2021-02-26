@@ -1,6 +1,6 @@
 <template>
   <section class="w-full">
-    <div class="flex items-center relative">
+    <div class="h-screen lg:h--packet-photo flex items-center relative">
       <div
         class="absolute flex corousel text-gray-200 bottom-2 md:inset-0 container mx-auto items-center justify-center md:justify-end px-5"
       >
@@ -36,11 +36,13 @@
         </div>
       </div>
 
-      <div class="hero-image w-full">
-        <div class="absolute inset-0 h-full bg-opacity-50 bg-gray-800"></div>
+      <div class="hero-image w-full lg:h--packet-photo">
+        <div
+          class="absolute inset-0 h-full lg:h--packet-photo bg-opacity-50 bg-gray-800"
+        ></div>
         <img
-          class="object-cover h-screen w-full"
-          src="../assets/content/Hero.jpg"
+          class="object-cover lg:h--packet-photo w-full"
+          src="../assets/images/Hero.jpg"
           alt=""
         />
       </div>
