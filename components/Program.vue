@@ -13,15 +13,15 @@
         </h6>
       </div>
       <div class="program-contents">
-        <div class="flex flex-col md:flex-row items-center">
+        <div class="flex flex-col lg:flex-row items-center">
           <div class="program-illu md:pr-20 md:py-10 relative">
             <img
               class="absolute w-full inset-0 md:-right-20"
-              src=" ../assets/content/Adventure.png"
+              src="~/assets/images/Adventure.png"
               alt=""
             />
             <div
-              class="w-96 h-96 md:w--30 md:h--30 bg-yellow-300 bg-opacity-25"
+              class="w-80 h-96 md:w--30 md:h--30 bg-yellow-300 bg-opacity-25"
             ></div>
           </div>
           <div class="program-text p-10 md:px-28">
@@ -66,7 +66,7 @@
             </div>
           </div>
         </div>
-        <div class="flex flex-col-reverse md:flex-row items-center">
+        <div class="flex flex-col-reverse lg:flex-row items-center">
           <div class="program-text p-10 md:px-28">
             <div class="program-title">
               <h3 class="font-bold text-2xl md:text-4xl text-yellow-900">
@@ -111,11 +111,11 @@
           <div class="program-illu md:pl-20 md:py-10 relative">
             <img
               class="absolute w-full inset-0 md:-left-24"
-              src=" ../assets/content/Training.png"
+              src="~/assets/images/Training.png"
               alt=""
             />
             <div
-              class="w-96 h-96 md:w--30 md:h--30 bg-yellow-300 bg-opacity-25"
+              class="w-80 h-96 md:w--30 md:h--30 bg-yellow-300 bg-opacity-25"
             ></div>
           </div>
         </div>

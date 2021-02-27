@@ -37,7 +37,7 @@
                 </div>
                 <img
                   src="~/assets/images/Rafting.png"
-                  class="object-cover w-full h-96 lg:h--category-lg rounded-xl"
+                  class="object-cover w-full h-96 lg:w--category-lg rounded-xl"
                   alt=""
                 />
                 <div
@@ -76,7 +76,7 @@
                 </div>
                 <img
                   src="~/assets/images/Hero.jpg"
-                  class="object-cover w-full h-96 lg:h--category-lg rounded-xl"
+                  class="object-cover w-full h-96 lg:w--category-lg rounded-xl"
                   alt=""
                 />
                 <div
@@ -115,7 +115,7 @@
                 </div>
                 <img
                   src="~/assets/images/Hero.jpg"
-                  class="object-cover w-full h-96 lg:h--category-lg rounded-xl"
+                  class="object-cover w-full h-96 lg:w--category-lg rounded-xl"
                   alt=""
                 />
                 <div

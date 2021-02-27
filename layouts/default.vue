@@ -3,6 +3,7 @@
     <Navbar />
     <Nuxt />
     <Footer />
+    <FloatWaBtn />
   </div>
 </template>
 

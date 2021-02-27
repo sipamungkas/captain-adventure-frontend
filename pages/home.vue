@@ -10,8 +10,186 @@
       </div>
     </section>
 
-    <section class="w-full">
-      <div class="container mx-auto mt-20">
+    <section class="w-full my-10">
+      <div class="section-wrapper relative lg:h--price-photo flex items-center">
+        <div
+          class="absolute background-testimoni bg-yellow-300 bg-opacity-25 lg:w--price-photo lg:h--price-photo inset-0"
+        ></div>
+        <div class="container mx-auto p-4 my-4 relative">
+          <div class="testimoni-wrapper">
+            <div class="section-title">
+              <h1 class="text-xl lg:text-3xl font-semibold">
+                Testimonial Customer
+              </h1>
+            </div>
+            <div class="testimoni-body flex items-center py-6">
+              <div class="hidden lg:inline-flex image-wrapper lg:mr-4">
+                <img
+                  class="lg:w-96 lg:h--28 object-cover"
+                  src="~/assets/images/Rafting.png"
+                  alt=""
+                />
+              </div>
+              <div class="customer-wrapper grid grid-cols-1 gap-4 lg:ml-2">
+                <div
+                  class="testimoni-buble max-h-full lg:max-w-4xl bg-gray-100 flex p-4"
+                >
+                  <div class="customer-picture mr-4">
+                    <div class="w-10 h-10 rounded-full bg-gray-700"></div>
+                  </div>
+                  <div class="customer-detail">
+                    <div class="customer-name font-semibold mb-2">
+                      Pablo Picasso
+                    </div>
+                    <div class="customer-quote flex flex-col lg:flex-row">
+                      <span class="mr-2 w-6 h-6 flex-none"
+                        ><img
+                          class="w-6 h-6"
+                          src="~/assets/icons/Icon Testimonial.png"
+                          alt=""
+                      /></span>
+                      <p class="relative top-2 lg:max-w-3xl p-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        do eiusmod tempor Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor asd
+                        dasd aa
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="testimoni-buble max-h-full lg:max-w-4xl bg-gray-100 flex p-4"
+                >
+                  <div class="customer-picture mr-4">
+                    <div class="w-10 h-10 rounded-full bg-gray-700"></div>
+                  </div>
+                  <div class="customer-detail">
+                    <div class="customer-name font-semibold mb-2">
+                      Pablo Picasso
+                    </div>
+                    <div class="customer-quote flex flex-col lg:flex-row">
+                      <span class="mr-2 w-6 h-6 flex-none"
+                        ><img
+                          class="w-6 h-6"
+                          src="~/assets/icons/Icon Testimonial.png"
+                          alt=""
+                      /></span>
+                      <p class="relative top-2 lg:max-w-3xl p-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        do eiusmod tempor Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  class="testimoni-buble max-h-full lg:max-w-4xl bg-gray-100 flex p-4"
+                >
+                  <div class="customer-picture mr-4">
+                    <div class="w-10 h-10 rounded-full bg-gray-700"></div>
+                  </div>
+                  <div class="customer-detail">
+                    <div class="customer-name font-semibold mb-2">
+                      Pablo Picasso
+                    </div>
+                    <div class="customer-quote flex flex-col lg:flex-row">
+                      <span class="mr-2 w-6 h-6 flex-none"
+                        ><img
+                          class="w-6 h-6"
+                          src="~/assets/icons/Icon Testimonial.png"
+                          alt=""
+                      /></span>
+                      <p class="relative top-2 lg:max-w-3xl p-2">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor Lorem
+                        ipsum dolor sit amet, consectetur adipiscing elit, sed
+                        do eiusmod tempor Lorem ipsum dolor sit amet,
+                        consectetur adipiscing elit, sed do eiusmod tempor
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full my-6 relative">
+      <div class="container mx-auto">
+        <div class="wrapper mx-4">
+          <div
+            class="office-wrapper flex flex-col lg:flex-row items-center relative"
+          >
+            <div class="center-office w-full lg:w-80 lg:mr-4">
+              <h1 class="text-left text-2xl text-gray-900 font-semibold">
+                Kantor Pusat
+              </h1>
+              <div class="bg-gray-100 rounded-2xl my-4">
+                <div class="text-left p-4">
+                  <img
+                    src="~/assets/icons/Icon Lokasi.svg"
+                    class="absolute mt-1"
+                    alt=""
+                  />
+                  <br />
+                  <p class="text-left mt-8">
+                    Lokasi kantor pusat berada di Kota Malang, Jawa Timur
+                    Indonesia.
+                  </p>
+                </div>
+              </div>
+
+              <div class="location-wrapper">
+                <h1 class="text-left text-2xl text-gray-900 font-semibold">
+                  Tempat Kegiatan
+                </h1>
+                <div class="bg-gray-100 rounded-2xl my-4">
+                  <div class="text-left p-4">
+                    <img
+                      src="~/assets/icons/Icon Lokasi.svg"
+                      class="absolute mt-1"
+                      alt=""
+                    />
+                    <br />
+                    <p class="text-left mt-8">
+                      Malang, Batu, Bromo, Banyuwangi, Yogyakarta, Dieng
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div
+                class="bg-yellow-300 bg-opacity-25 p-5 w-80 md:w--price-photo h-80 lg:ml-4 lg:w--55r lg:h--category-lg relative lg:my-8"
+              >
+                <iframe
+                  class="absolute w-full h-72 lg:w--52r lg:h--28 right-0 top-5"
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.154550844829!2d110.76976221477668!3d-7.558121994549278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a15d549589f8f%3A0x6786fc41534ba967!2sUniversitas%20Muhammadiyah%20Surakarta!5e0!3m2!1sen!2sid!4v1613522313422!5m2!1sen!2sid"
+                  frameborder="0"
+                  style="border: 0"
+                  allowfullscreen=""
+                  aria-hidden="false"
+                  tabindex="0"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full relative my-4">
+      <div class="container mx-auto my-8">
         <div class="flex flex-col items-center">
           <div class="image-wrapper flex justify-center">
             <img

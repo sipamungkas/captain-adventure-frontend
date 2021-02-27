@@ -13,7 +13,9 @@
       </h6>
     </div>
     <div class="offers-contents">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-14 mx-10 md:mx-16 p-10">
+      <div
+        class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-14 mx-10 md:mx-16 p-10"
+      >
         <div class="bg-gray-100 rounded-md p-5">
           <div class="flex flex-col items-center">
             <div class="offer-title my-3">

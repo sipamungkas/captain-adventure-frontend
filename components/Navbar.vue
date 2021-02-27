@@ -1,9 +1,9 @@
 <template>
-  <header class="w-full h-nav bg-yellow-900 sticky inset-0 z-50">
+  <header class="w-full h-nav bg-yellow-900 sticky inset-0 z-40">
     <nav class="h-nav container mx-auto">
       <div class="h-nav flex items-center justify-between px-4">
         <div class="w-10 py-2 md:py-0 md:w-16 flex items-center">
-          <a href="#"><img src="icon.png" alt="" /></a>
+          <a href="#"><img src="/icon.png" alt="" /></a>
         </div>
         <div class="w-auto">
           <ul
@@ -47,7 +47,7 @@
             <li class="nav">
               <NuxtLink
                 class="h-nav w-24 flex items-center justify-center py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
-                to="/blog"
+                to="/blogs"
                 >Blog</NuxtLink
               >
             </li>
@@ -81,7 +81,7 @@
       </div>
     </nav>
     <div
-      class="mobile-nav w-full lg:h-full invisible lg:invisible bg-gray-800 bg-opacity-44 transition-shadow"
+      class="transition-opacity duration-500 ease-in-out opacity-0 mobile-nav w-full lg:h-full invisible lg:invisible bg-gray-800 bg-opacity-44"
       @click="toggleGaes"
     >
       <div class="w-full bg-yellow-900 z-50">
@@ -124,7 +124,7 @@
             </li>
             <li class="">
               <NuxtLink
-                to="/blog"
+                to="/blogs"
                 class="h-14 flex justify-start items-center text-white text-xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2 w-full"
                 >Blog</NuxtLink
               >
@@ -142,6 +142,7 @@ export default {
     toggleGaes() {
       const el = document.querySelector('.mobile-nav')
       el.classList.toggle('invisible')
+      el.classList.toggle('opacity-0')
     },
   },
 }
