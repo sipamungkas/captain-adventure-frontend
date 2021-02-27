@@ -32,6 +32,8 @@
               </div>
               <div class="customer-wrapper grid grid-cols-1 gap-4 lg:ml-2">
                 <div
+                  v-for="testimoni in testimonials"
+                  :key="testimoni.id"
                   class="testimoni-buble max-h-full lg:max-w-4xl bg-gray-100 flex p-4"
                 >
                   <div class="customer-picture mr-4">
@@ -39,7 +41,7 @@
                   </div>
                   <div class="customer-detail">
                     <div class="customer-name font-semibold mb-2">
-                      Pablo Picasso
+                      {{ testimoni.name }}
                     </div>
                     <div class="customer-quote flex flex-col lg:flex-row">
                       <span class="mr-2 w-6 h-6 flex-none"
@@ -48,70 +50,8 @@
                           src="~/assets/icons/Icon Testimonial.png"
                           alt=""
                       /></span>
-                      <p class="relative top-2 lg:max-w-3xl p-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit, sed
-                        do eiusmod tempor Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor asd
-                        dasd aa
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="testimoni-buble max-h-full lg:max-w-4xl bg-gray-100 flex p-4"
-                >
-                  <div class="customer-picture mr-4">
-                    <div class="w-10 h-10 rounded-full bg-gray-700"></div>
-                  </div>
-                  <div class="customer-detail">
-                    <div class="customer-name font-semibold mb-2">
-                      Pablo Picasso
-                    </div>
-                    <div class="customer-quote flex flex-col lg:flex-row">
-                      <span class="mr-2 w-6 h-6 flex-none"
-                        ><img
-                          class="w-6 h-6"
-                          src="~/assets/icons/Icon Testimonial.png"
-                          alt=""
-                      /></span>
-                      <p class="relative top-2 lg:max-w-3xl p-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit, sed
-                        do eiusmod tempor Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor
-                      </p>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  class="testimoni-buble max-h-full lg:max-w-4xl bg-gray-100 flex p-4"
-                >
-                  <div class="customer-picture mr-4">
-                    <div class="w-10 h-10 rounded-full bg-gray-700"></div>
-                  </div>
-                  <div class="customer-detail">
-                    <div class="customer-name font-semibold mb-2">
-                      Pablo Picasso
-                    </div>
-                    <div class="customer-quote flex flex-col lg:flex-row">
-                      <span class="mr-2 w-6 h-6 flex-none"
-                        ><img
-                          class="w-6 h-6"
-                          src="~/assets/icons/Icon Testimonial.png"
-                          alt=""
-                      /></span>
-                      <p class="relative top-2 lg:max-w-3xl p-2">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor Lorem
-                        ipsum dolor sit amet, consectetur adipiscing elit, sed
-                        do eiusmod tempor Lorem ipsum dolor sit amet,
-                        consectetur adipiscing elit, sed do eiusmod tempor
+                      <p class="relative top-1 lg:max-w-3xl p-2">
+                        {{ testimoni.testimoni }}
                       </p>
                     </div>
                   </div>
@@ -222,7 +162,13 @@
 </template>
 
 <script>
-export default {}
+export default {
+  async asyncData({ params, $axios, $config: { baseAPIURL } }) {
+    const res = await $axios.$get(`${baseAPIURL}v1/landing-page/home`)
+    const { testimonials } = res.data
+    return { testimonials }
+  },
+}
 </script>
 
 <style></style>

@@ -52,10 +52,7 @@
                       <p>Captain Adventures</p>
                     </li>
                     <li class="mb-3 flex items-center">
-                      <img
-                        class="mr-4 w-5"
-                        src="~/assets/icons/Icon Gmail.svg"
-                      />
+                      <img class="mr-4 w-5" src="~/assets/icons/Gmail.svg" />
                       <p>captainadventur@gmail.com</p>
                     </li>
                     <li class="mb-3 flex items-center">

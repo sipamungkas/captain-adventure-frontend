@@ -12,7 +12,7 @@
             <h1
               class="text-white mt-10 md:mt-20 text-3xl md:text-5xl font-bold"
             >
-              Selamat Datang di Captain Marvel
+              Selamat Datang di Captain Adventure
             </h1>
             <h5
               class="text-white mt-5 text-lg md:text-2xl font-medium md:w-2/3 lg:w-1/2 text-justify"
@@ -31,12 +31,18 @@
                 Detail
               </button>
               <button
-                class="cta-video py-2.5 px-4 border-solid border-4 bg-yellow-600 bg-opacity-50 border-yellow-600 font-semibold text-lg text-white text-center flex items-center justify-center rounded-md"
-                data-frame='<iframe class="w-full h-full" src="https://www.youtube.com/embed/_Emp_kRnZSk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+                class="index-2 cta-video py-2.5 px-4 border-solid border-4 bg-yellow-600 bg-opacity-50 border-yellow-600 font-semibold text-lg text-white text-center flex items-center justify-center rounded-md"
                 @click="popUp"
               >
                 Play Video
               </button>
+              <iframe
+                class="w-full h-full hidden index-2"
+                src="https://www.youtube.com/embed/_Emp_kRnZSk"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
 
@@ -58,7 +64,7 @@
             <h1
               class="text-white mt-10 md:mt-20 text-3xl md:text-5xl font-bold"
             >
-              Selamat Datang di Captain Marvel
+              Selamat Datang di Captain Adventure
             </h1>
             <h5
               class="text-white mt-5 text-lg md:text-2xl font-medium md:w-2/3 lg:w-1/2 text-justify"
@@ -78,11 +84,17 @@
               </button>
               <button
                 class="cta-video py-2.5 px-4 border-solid border-4 bg-yellow-600 bg-opacity-50 border-yellow-600 font-semibold text-lg text-white text-center flex items-center justify-center rounded-md"
-                data-frame='<iframe class="w-full h-full" src="https://www.youtube.com/embed/_Emp_kRnZSk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
                 @click="popUp"
               >
                 Play Video
               </button>
+              <iframe
+                class="w-full h-full hidden"
+                src="https://www.youtube.com/embed/_Emp_kRnZSk"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              ></iframe>
             </div>
           </div>
 
@@ -166,7 +178,7 @@ export default {
 
       modalOverlay.classList.add('fixed', 'inset-0', 'bg-black', 'opacity-75')
       const modalContent = document.createElement('div')
-      modalContent.innerHTML = event.target.dataset.frame
+      modalContent.innerHTML = document.querySelector('iframe.index-2')
       modalContent.classList.add(
         'bg-white',
         'p-0',

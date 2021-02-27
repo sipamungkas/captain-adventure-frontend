@@ -2,8 +2,13 @@
   <header class="w-full h-nav bg-yellow-900 sticky inset-0 z-40">
     <nav class="h-nav container mx-auto">
       <div class="h-nav flex items-center justify-between px-4">
-        <div class="w-10 py-2 md:py-0 md:w-16 flex items-center">
-          <a href="#"><img src="/icon.png" alt="" /></a>
+        <div class="w-full py-2 md:py-0 flex items-center">
+          <NuxtLink to="/home" class="flex items-center"
+            ><img class="w-10 md:w-16 mr-1" src="/icon.png" alt="" />
+            <p class="hidden md:inline-flex text-white text-xl">
+              CAPTAIN ADVENTURE.
+            </p>
+          </NuxtLink>
         </div>
         <div class="w-auto">
           <ul

@@ -50,4 +50,8 @@ export default {
   server: {
     port: 3030, // default: 3000
   },
+
+  publicRuntimeConfig: {
+    baseAPIURL: process.env.BASE_API_URL || 'http://localhost:3000/',
+  },
 }
