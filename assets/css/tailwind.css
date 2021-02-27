@@ -18,6 +18,13 @@ nav * {
   .packet-content h2 {
     @apply font-bold text-base;
   }
+
+  .packet-content h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-semibold text-base;
+  }
   .nav .nuxt-link-active {
     @apply rounded-b-3xl bg-white text-yellow-900 font-bold px-2;
   }
@@ -63,8 +70,29 @@ nav * {
     .h--packet-photo {
       height: 35rem;
     }
-    .h--category-lg {
+    .w--category-lg {
       width: 30.5rem;
+    }
+    .h--category-lg {
+      height: 30.5rem;
+    }
+    .w--28 {
+      width: 28rem;
+    }
+    .h--28 {
+      height: 28rem;
+    }
+    .w--52r {
+      width: 52rem;
+    }
+    .h--52r {
+      height: 52rem;
+    }
+    .w--55r {
+      width: 55rem;
+    }
+    .h--55r {
+      height: 55rem;
     }
   }
 }
