@@ -15,7 +15,7 @@
           </h1>
         </div>
 
-        <div class="my-4 mx-4 lg:mx-8 text-justify">
+        <div class="my-4 mx-4 lg:mx-8 text-justify body-content">
           {{ packet.body }}
         </div>
       </div>

@@ -49,7 +49,7 @@
             </div>
           </div>
         </div>
-        <div class="packet-content my-4 lg:my-8">
+        <div class="body-content my-4 lg:my-8">
           <div>
             {{ packet.description }}
           </div>
