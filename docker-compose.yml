@@ -11,5 +11,7 @@ services:
     expose:
       - '3030'
     working_dir: /app
+    environment:
+      BASE_API_URL: https://api.captain-adventure.com
     volumes:
       - ./:/app
