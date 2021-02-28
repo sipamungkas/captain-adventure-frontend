@@ -1,6 +1,6 @@
 <template>
-  <section class="w-full">
-    <div class="container mx-auto my-8">
+  <section class="w-full my-6">
+    <div class="container mx-auto">
       <div
         class="greeting-page text-center flex flex-col justify-center items-center"
       >

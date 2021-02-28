@@ -2,7 +2,7 @@
   <section class="w-full">
     <div
       v-swiper="swiperOption"
-      class="h-screen-80 lg:h--packet-photo flex items-center relative swiper-container"
+      class="h-screen-80 md:h--30 lg:h--packet-photo flex items-center relative swiper-container"
     >
       <div class="swiper-wrapper relative">
         <div class="swiper-slide relative">
@@ -10,7 +10,7 @@
             class="inset-0 hero-caption absolute container mx-auto px-4 z-20"
           >
             <h1
-              class="text-white mt-10 md:mt-20 text-3xl md:text-5xl font-bold"
+              class="text-white mt-6 md:mt-10 lg:mt-20 text-3xl md:text-5xl font-bold"
             >
               Selamat Datang di Captain Adventure
             </h1>
@@ -36,13 +36,6 @@
               >
                 Play Video
               </button>
-              <iframe
-                class="w-full h-full hidden index-2"
-                src="https://www.youtube.com/embed/_Emp_kRnZSk"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
             </div>
           </div>
 
@@ -88,13 +81,6 @@
               >
                 Play Video
               </button>
-              <iframe
-                class="w-full h-full hidden"
-                src="https://www.youtube.com/embed/_Emp_kRnZSk"
-                frameborder="0"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                allowfullscreen
-              ></iframe>
             </div>
           </div>
 
@@ -162,6 +148,8 @@ export default {
       const modalWrapper = document.createElement('div')
       const modalOverlay = document.createElement('div')
 
+      const template =
+        '<iframe class="w-full h-full" src="https://www.youtube.com/embed/_Emp_kRnZSk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
       modalOverlay.addEventListener('click', function () {
         modalWrapper.remove()
       })
@@ -178,7 +166,7 @@ export default {
 
       modalOverlay.classList.add('fixed', 'inset-0', 'bg-black', 'opacity-75')
       const modalContent = document.createElement('div')
-      modalContent.innerHTML = document.querySelector('iframe.index-2')
+      modalContent.innerHTML = template
       modalContent.classList.add(
         'bg-white',
         'p-0',

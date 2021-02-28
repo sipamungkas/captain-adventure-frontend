@@ -6,7 +6,7 @@
           <div class="packet-image lg:mr-16 lg:w--price">
             <img
               class="object-cover w-full lg:w--price h-96"
-              src="~/assets/images/Details.png"
+              src="~/assets/images/gallery-item1.png"
               alt=""
             />
           </div>

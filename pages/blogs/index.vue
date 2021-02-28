@@ -1,5 +1,5 @@
 <template>
-  <section class="w-full">
+  <section class="w-full my-6">
     <div class="container mx-auto p-6">
       <h3 class="font-bold text-2xl md:text-3xl">Blog</h3>
 
@@ -9,7 +9,7 @@
       >
         <div>
           <img
-            class="object-cover mt-6 rounded-md w-full h-96"
+            class="object-cover mt-6 rounded-md w-full h-72 lg:h-96"
             src="~/assets/images/gallery-item1.png"
             alt=""
           />
@@ -21,7 +21,11 @@
           </p>
           <div class="flex mt-4">
             <p class="text-sm">12 January 2021</p>
-            <a href="" class="ml-6 text-sm text-yellow-400"><u>Read more</u></a>
+            <NuxtLink
+              :to="'/blogs/' + firstPostPage.slug"
+              class="ml-6 text-sm text-yellow-400"
+              ><u>Read more</u></NuxtLink
+            >
           </div>
         </div>
 
@@ -31,7 +35,7 @@
           <div
             v-for="blog in blogs"
             :key="blog.id"
-            class="flex flex-col lg:flex-row"
+            class="grid grid-cols-1 lg:grid-cols-2"
           >
             <img
               class="object-cover mt-6 rounded-md w-full h-52"
@@ -45,10 +49,12 @@
               <p class="mt-2 text-sm">
                 {{ blog.short_description }}
               </p>
-              <div class="flex m-4">
+              <div class="flex">
                 <p class="text-sm">12 January 2021</p>
-                <a href="#" class="ml-6 text-sm text-yellow-400"
-                  ><u>Readmore</u></a
+                <NuxtLink
+                  :to="'/blogs/' + blog.slug"
+                  class="ml-6 text-sm text-yellow-400"
+                  ><u>Read more</u></NuxtLink
                 >
               </div>
             </div>
@@ -82,6 +88,7 @@ export default {
     )
     const { posts } = res.data
     const firstPostPage = posts.length > 0 ? posts[0] : null
+    if (posts.length > 0) posts.shift()
     const blogs = posts
 
     return { firstPostPage, blogs }

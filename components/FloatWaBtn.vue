@@ -1,3 +1,4 @@
+/* eslint-disable no-useless-escape */ /* eslint-disable no-useless-escape */
 <template>
   <div>
     <div
@@ -8,13 +9,19 @@
           Contact Me
         </div>
         <div
-          class="form-body flex py-10 px-4 bg-gray-400 items-center rounded-b-lg"
+          class="form-body flex py-10 px-4 bg-gray-400 items-center rounded-b-lg group-hover:bg-yellow-450"
         >
           <div class="input-form">
-            <input class="rounded-lg p-2 w-11/12 md:w-full" type="text" />
+            <input
+              v-model="text"
+              class="rounded-lg p-2 w-11/12 md:w-full"
+              type="text"
+            />
           </div>
-          <div class="btn-send">
-            <button class="p-4">></button>
+          <div class="btn-send flex items-center bg-green-500 rounded-full p-1">
+            <a class="ml-2" :href="apilink" target="_blank">
+              <img class="w-8 h-8 z-50" src="~/assets/icons/send.svg" alt="" />
+            </a>
           </div>
         </div>
       </div>
@@ -92,11 +99,41 @@
 
 <script>
 export default {
+  data: () => ({
+    fab: false,
+    fav: true,
+    menu: false,
+    message: false,
+    hints: true,
+    phone: '6285248999925',
+    text: '',
+    apilink: '',
+  }),
+  watch: {
+    text(val) {
+      this.apilink = 'http://'
+      this.apilink += 'api'
+      this.apilink +=
+        '.whatsapp.com/send?phone=' +
+        this.phone +
+        '&text=' +
+        encodeURI(this.text)
+    },
+  },
+  created() {
+    this.apilink = 'http://'
+    this.apilink += this.isMobile() ? 'api' : 'web'
+    this.apilink +=
+      '.whatsapp.com/send?phone=' + this.phone + '&text=' + encodeURI('Hello!')
+  },
   methods: {
     toggleChat() {
       const elChat = document.querySelector('.chat')
       elChat.classList.toggle('invisible')
       elChat.classList.toggle('opacity-0')
+    },
+    isMobile() {
+      return false
     },
   },
 }
