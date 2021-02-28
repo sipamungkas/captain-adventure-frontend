@@ -19,12 +19,14 @@
             <h4
               class="font-semibold text-xl text-center lg:text-3xl lg:text-left"
             >
-              Adventure
+              {{ category.name }}
             </h4>
-            <p class="font-medium text-medium lg:text-xl">3 Paket</p>
+            <p class="font-medium text-medium lg:text-xl">
+              {{ category.packets_count }} Paket
+            </p>
           </div>
           <div class="category-cta">
-            <NuxtLink to="/price/category"
+            <NuxtLink :to="'/price/' + category.slug"
               ><button
                 class="px-6 py-3 md:px-8 md:py-4 bg-yellow-400 rounded-lg font-semibold text-lg"
               >
@@ -37,3 +39,14 @@
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    category: {
+      required: true,
+      type: Object,
+    },
+  },
+}
+</script>

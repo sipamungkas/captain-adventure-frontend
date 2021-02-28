@@ -1,6 +1,6 @@
 <template>
   <div class="container mx-auto">
-    <div class="category-wrapper m-4">
+    <div class="category-wrapper mx-4">
       <div class="price-title">
         <h1 class="font-bold text-3xl md:text-5xl">Harga Paket</h1>
       </div>
@@ -13,13 +13,24 @@
       <div class="price-list my-4">
         <div class="flex justify-center">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24">
-            <CategoryOdd />
-            <CategoryEven />
+            <CategoryOdd
+              v-for="category in categories"
+              :key="category.id"
+              :category="category"
+            />
           </div>
         </div>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    categories: Array,
+  },
+}
+</script>
 
 <style></style>

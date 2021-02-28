@@ -114,7 +114,7 @@
               >
                 <iframe
                   class="absolute w-full h-72 lg:w--52r lg:h--28 right-0 top-5"
-                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.154550844829!2d110.76976221477668!3d-7.558121994549278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a15d549589f8f%3A0x6786fc41534ba967!2sUniversitas%20Muhammadiyah%20Surakarta!5e0!3m2!1sen!2sid!4v1613522313422!5m2!1sen!2sid"
+                  :src="map"
                   frameborder="0"
                   style="border: 0"
                   allowfullscreen=""
@@ -163,10 +163,20 @@
 
 <script>
 export default {
-  async asyncData({ params, $axios, $config: { baseAPIURL } }) {
+  async asyncData({
+    params,
+    $axios,
+    $config: { baseAPIURL },
+    app,
+    $getMap,
+    $noMap,
+    $getAddress,
+  }) {
     const res = await $axios.$get(`${baseAPIURL}v1/landing-page/home`)
-    const { testimonials } = res.data
-    return { testimonials }
+    const { testimonials, contacts } = res.data
+    const map = $getMap(contacts)
+    const contact = $noMap(contacts)
+    return { testimonials, map, contact }
   },
 }
 </script>

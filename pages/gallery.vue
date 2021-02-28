@@ -18,150 +18,11 @@
         <div
           class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8"
         >
-          <div class="gallery-item">
-            <div class="w-full relative">
-              <div class="w-full relative image-gallery">
-                <img
-                  src="~/assets/images/gallery-item1.png"
-                  width="400px"
-                  height="350px"
-                  class="object-cover w-full h-96"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="w-full relative">
-              <div class="w-full relative image-gallery">
-                <img
-                  src="~/assets/images/gallery-item1.png"
-                  width="auto"
-                  height="auto"
-                  class="object-cover w-full h-96"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="w-full relative">
-              <div class="w-full relative image-gallery">
-                <img
-                  src="~/assets/images/gallery-item1.png"
-                  width="400px"
-                  height="350px"
-                  class="object-cover w-full h-96"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="w-full relative">
-              <div class="w-full relative image-gallery">
-                <img
-                  src="~/assets/images/gallery-item1.png"
-                  width="auto"
-                  height="auto"
-                  class="object-cover w-full h-96"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="w-full relative">
-              <div class="w-full relative image-gallery">
-                <img
-                  src="~/assets/images/gallery-item1.png"
-                  width="400px"
-                  height="350px"
-                  class="object-cover w-full h-96"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="w-full relative">
-              <div class="w-full relative image-gallery">
-                <img
-                  src="~/assets/images/gallery-item1.png"
-                  width="auto"
-                  height="auto"
-                  class="object-cover w-full h-96"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="w-full relative">
-              <div class="w-full relative image-gallery">
-                <img
-                  src="~/assets/images/gallery-item1.png"
-                  width="400px"
-                  height="350px"
-                  class="object-cover w-full h-96"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="w-full relative">
-              <div class="w-full relative image-gallery">
-                <img
-                  src="~/assets/images/gallery-item1.png"
-                  width="400px"
-                  height="350px"
-                  class="object-cover w-full h-96"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="w-full relative">
-              <div class="w-full relative image-gallery">
-                <img
-                  src="~/assets/images/gallery-item1.png"
-                  width="auto"
-                  height="auto"
-                  class="object-cover w-full h-96"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="w-full relative">
-              <div class="w-full relative image-gallery">
-                <img
-                  src="~/assets/images/gallery-item1.png"
-                  width="400px"
-                  height="350px"
-                  class="object-cover w-full h-96"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item">
-            <div class="w-full relative">
-              <div class="w-full relative image-gallery">
-                <img
-                  src="~/assets/images/gallery-item1.png"
-                  width="auto"
-                  height="auto"
-                  class="object-cover w-full h-96"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-          <div class="gallery-item">
+          <div
+            v-for="gallery in galleries"
+            :key="gallery.id"
+            class="gallery-item"
+          >
             <div class="w-full relative">
               <div class="w-full relative image-gallery">
                 <img
@@ -195,3 +56,16 @@
     </div>
   </section>
 </template>
+
+<script>
+export default {
+  async asyncData({ params, $axios, $config: { baseAPIURL } }) {
+    const res = await $axios.$get(
+      `${baseAPIURL}v1/landing-page/galleries?perPage=9`
+    )
+    const { galleries } = res.data
+
+    return { galleries }
+  },
+}
+</script>
