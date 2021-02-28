@@ -1,0 +1,15 @@
+version: '3.8'
+services:
+  captain_frontend:
+    restart: always
+    build: .
+    image: node:14.16.0-alpine
+    command: sh -c "npm install && npm run build &&
+      NODE_ENV=production npm start"
+    ports:
+      - 3030:3030
+    expose:
+      - '3030'
+    working_dir: /app
+    volumes:
+      - ./:/app
