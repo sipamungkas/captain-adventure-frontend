@@ -1,6 +1,6 @@
 <template>
   <div>
-    <Hero />
+    <Hero :hero="heros" />
 
     <Program />
 
@@ -173,10 +173,10 @@ export default {
     $getAddress,
   }) {
     const res = await $axios.$get(`${baseAPIURL}v1/landing-page/home`)
-    const { testimonials, contacts } = res.data
+    const { heros, testimonials, contacts } = res.data
     const map = $getMap(contacts)
     const contact = $noMap(contacts)
-    return { testimonials, map, contact }
+    return { heros, testimonials, map, contact }
   },
 }
 </script>
