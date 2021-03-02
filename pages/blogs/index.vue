@@ -39,7 +39,7 @@
           >
             <img
               class="object-cover mt-6 rounded-md w-full h-52"
-              src="~/assets/images/gallery-item1.png"
+              :src="$config.baseAPIURL + blog.image"
               alt=""
             />
             <div class="lg:m-4">

@@ -5,22 +5,19 @@
       class="h-screen-80 md:h--30 lg:h--packet-photo flex items-center relative swiper-container"
     >
       <div class="swiper-wrapper relative">
-        <div class="swiper-slide relative">
+        <div v-for="item in hero" :key="item.id" class="swiper-slide relative">
           <div
             class="inset-0 hero-caption absolute container mx-auto px-4 z-20"
           >
             <h1
               class="text-white mt-6 md:mt-10 lg:mt-20 text-3xl md:text-5xl font-bold"
             >
-              Selamat Datang di Captain Adventure
+              {{ item.title }}
             </h1>
             <h5
               class="text-white mt-5 text-lg md:text-2xl font-medium md:w-2/3 lg:w-1/2 text-justify"
             >
-              Event Organizer (EO) & Outbound Package Provider dengan berbagai
-              fasilitas yang kami tawarkan untuk Anda antara lain Outbound
-              Catering, Transportasi, Akomodasi, Makanan dan Minuman serta Jasa
-              Dokumentasi foto dan video untuk kegiatan.
+              {{ item.short_description }}
             </h5>
             <div
               class="flex items-center justify-center md:justify-start mt-14"
@@ -31,7 +28,9 @@
                 Detail
               </button>
               <button
+                v-if="item.video != 'null'"
                 class="index-2 cta-video py-2.5 px-4 border-solid border-4 bg-yellow-600 bg-opacity-50 border-yellow-600 font-semibold text-lg text-white text-center flex items-center justify-center rounded-md"
+                :data-content="item.video"
                 @click="popUp"
               >
                 Play Video
@@ -45,52 +44,11 @@
             ></div>
             <img
               class="object-cover h-screen-80 lg:h--packet-photo w-full"
-              src="../assets/images/Hero.jpg"
-              alt=""
-            />
-          </div>
-        </div>
-        <div class="swiper-slide relative">
-          <div
-            class="inset-0 hero-caption absolute container mx-auto px-4 z-20"
-          >
-            <h1
-              class="text-white mt-10 md:mt-20 text-3xl md:text-5xl font-bold"
-            >
-              Selamat Datang di Captain Adventure
-            </h1>
-            <h5
-              class="text-white mt-5 text-lg md:text-2xl font-medium md:w-2/3 lg:w-1/2 text-justify"
-            >
-              Event Organizer (EO) & Outbound Package Provider dengan berbagai
-              fasilitas yang kami tawarkan untuk Anda antara lain Outbound
-              Catering, Transportasi, Akomodasi, Makanan dan Minuman serta Jasa
-              Dokumentasi foto dan video untuk kegiatan.
-            </h5>
-            <div
-              class="flex items-center justify-center md:justify-start mt-14"
-            >
-              <button
-                class="mr-8 py-4 px-8 md:px-10 bg-yellow-600 font-semibold text-base text-white text-center flex items-center justify-center rounded-md"
-              >
-                Detail
-              </button>
-              <button
-                class="cta-video py-2.5 px-4 border-solid border-4 bg-yellow-600 bg-opacity-50 border-yellow-600 font-semibold text-lg text-white text-center flex items-center justify-center rounded-md"
-                @click="popUp"
-              >
-                Play Video
-              </button>
-            </div>
-          </div>
-
-          <div class="hero-image w-full lg:h--packet-photo">
-            <div
-              class="absolute inset-0 h-full lg:h--packet-photo bg-opacity-50 bg-gray-800"
-            ></div>
-            <img
-              class="object-cover h-screen-80 lg:h--packet-photo w-full"
-              src="../assets/images/Hero.jpg"
+              :src="
+                item.image
+                  ? $config.baseAPIURL + item.image
+                  : require(`~/assets/images/Hero.jpg`)
+              "
               alt=""
             />
           </div>
@@ -110,6 +68,11 @@ export default {
   directives: {
     swiper: directive,
   },
+  props: {
+    hero: {
+      type: Array,
+    },
+  },
   data() {
     return {
       swiperOption: {
@@ -122,24 +85,6 @@ export default {
           nextEl: '.swiper-button-next',
           prevEl: '.swiper-button-prev',
         },
-        // breakpoints: {
-        //   1024: {
-        //     slidesPerView: 4,
-        //     spaceBetween: 10,
-        //   },
-        //   768: {
-        //     slidesPerView: 3,
-        //     spaceBetween: 10,
-        //   },
-        //   640: {
-        //     slidesPerView: 2,
-        //     spaceBetween: 10,
-        //   },
-        //   320: {
-        //     slidesPerView: 1,
-        //     spaceBetween: 10,
-        //   },
-        // },
       },
     }
   },
@@ -148,8 +93,16 @@ export default {
       const modalWrapper = document.createElement('div')
       const modalOverlay = document.createElement('div')
 
-      const template =
-        '<iframe class="w-full h-full" src="https://www.youtube.com/embed/_Emp_kRnZSk" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>'
+      let yTubeId = event.target.dataset.content
+      if (yTubeId.includes('watch')) {
+        const indexWatch = yTubeId.indexOf('=')
+        yTubeId = yTubeId.substring(indexWatch + 1).replace('"', '')
+      } else {
+        yTubeId = yTubeId.split('/')
+        yTubeId = yTubeId[yTubeId.length - 1].replace('"', '')
+      }
+
+      const template = `<iframe class="w-full h-full" src="https://www.youtube.com/embed/${yTubeId}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>`
       modalOverlay.addEventListener('click', function () {
         modalWrapper.remove()
       })

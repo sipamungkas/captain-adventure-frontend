@@ -5,19 +5,20 @@
         <div class="flex flex-col items-center justify-center mx-4 lg:mx-0">
           <img
             class="rounded-lg w-full h-72 lg:w--price lg:h-96 object-cover"
-            src="~/assets/images/gallery-item1.png"
+            :src="$config.baseAPIURL + post.image"
             alt=""
           />
           <h1
             class="text-2xl lg:text-3xl font-semibold my-4 text-center w-full lg:w--price"
           >
-            {{ packet.title }}
+            {{ post.title }}
           </h1>
         </div>
 
-        <div class="my-4 mx-4 lg:mx-8 text-justify body-content">
-          {{ packet.body }}
-        </div>
+        <div
+          class="my-4 mx-4 lg:mx-8 text-justify body-content"
+          v-html="post.body"
+        ></div>
       </div>
 
       <div class="credit inline-block mx-4 lg:mx-8">
@@ -40,9 +41,9 @@ export default {
     const res = await $axios.$get(
       `${baseAPIURL}v1/landing-page/blogs/${params.blog}`
     )
-    const { packet } = res.data
+    const { post } = res.data
 
-    return { packet }
+    return { post }
   },
 }
 </script>
