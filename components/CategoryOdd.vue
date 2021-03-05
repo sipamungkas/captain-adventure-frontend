@@ -2,11 +2,12 @@
   <div class="price-item p-4 w-full md:w--30">
     <div class="w-full relative">
       <div
-        class="-bottom-4 -right-4 w-full h-96 absolute lg:h-full bg-yellow-900"
+        class="w-full h-96 absolute lg:h-full bg-yellow-900"
+        :class="{ '-bottom-4 -right-4': isOdd, '-top-4 -left-4': !isOdd }"
       ></div>
       <div class="w-full relative image-price">
         <img
-          src="~/assets/images/Rafting.png"
+          :src="$config.baseAPIURL + category.image"
           class="object-cover w-full h-96 rounded-xl"
           alt=""
         />
@@ -22,7 +23,7 @@
               {{ category.name }}
             </h4>
             <p class="font-medium text-medium lg:text-xl">
-              {{ category.packets_count }} Paket
+              {{ odd + 1 }} Paket
             </p>
           </div>
           <div class="category-cta">
@@ -43,9 +44,18 @@
 <script>
 export default {
   props: {
+    odd: {
+      type: Number,
+      default: 1,
+    },
     category: {
       required: true,
       type: Object,
+    },
+  },
+  computed: {
+    isOdd() {
+      return (this.odd + 1) % 2 !== 0
     },
   },
 }

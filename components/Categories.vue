@@ -14,9 +14,10 @@
         <div class="flex justify-center">
           <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24">
             <CategoryOdd
-              v-for="category in categories"
+              v-for="(category, index) in categories"
               :key="category.id"
               :category="category"
+              :odd="index"
             />
           </div>
         </div>
