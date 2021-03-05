@@ -180,6 +180,16 @@ export default {
     const contact = $noMap(contacts)
     return { heros, testimonials, map, contact }
   },
+  head: {
+    title: 'Captain Adventure | Adventure with captain',
+    meta: [
+      {
+        hid: 'description',
+        name: 'description',
+        content: 'Home page description',
+      },
+    ],
+  },
 }
 </script>
 
