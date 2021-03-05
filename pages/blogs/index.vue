@@ -20,7 +20,7 @@
             {{ firstPostPage.short_description }}
           </p>
           <div class="flex mt-4">
-            <p class="text-sm">12 January 2021</p>
+            <p class="text-sm">{{ firstPostPage.dateFormat }}</p>
             <NuxtLink
               :to="'/blogs/' + firstPostPage.slug"
               class="ml-6 text-sm text-yellow-400"
@@ -50,7 +50,7 @@
                 {{ blog.short_description }}
               </p>
               <div class="flex">
-                <p class="text-sm">12 January 2021</p>
+                <p class="text-sm">{{ blog.dateFormat }}</p>
                 <NuxtLink
                   :to="'/blogs/' + blog.slug"
                   class="ml-6 text-sm text-yellow-400"
@@ -87,6 +87,12 @@ export default {
       `${baseAPIURL}v1/landing-page/blogs?perPage=4`
     )
     const { posts } = res.data
+    posts.forEach((item) => {
+      const datePost = new Date(item.date)
+      item.dateFormat = `${datePost.getDate()}-${
+        datePost.getMonth() + 1
+      }-${datePost.getFullYear()}`
+    })
     const firstPostPage = posts.length > 0 ? posts[0] : null
     if (posts.length > 0) posts.shift()
     const blogs = posts

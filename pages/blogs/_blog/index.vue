@@ -24,10 +24,16 @@
       <div class="credit inline-block mx-4 lg:mx-8">
         <div class="credit-wrapper bg-gray-300 p-4 rounded-md">
           <div class="writer-wrapper">
-            <p><span class="text-gray-500 mr-4">Penulis:</span> Ragil BP</p>
+            <p>
+              <span class="text-gray-500 mr-4">Penulis:</span>
+              {{ post.writter }}
+            </p>
           </div>
           <div class="date-wrapper">
-            <p><span class="text-gray-500 mr-4">Publish:</span> 20-02-2020</p>
+            <p>
+              <span class="text-gray-500 mr-4">Publish:</span>
+              {{ post.dateFormat }}
+            </p>
           </div>
         </div>
       </div>
@@ -42,7 +48,10 @@ export default {
       `${baseAPIURL}v1/landing-page/blogs/${params.blog}`
     )
     const { post } = res.data
-
+    const datePost = new Date(post.date)
+    post.dateFormat = `${datePost.getDate()}-${
+      datePost.getMonth() + 1
+    }-${datePost.getFullYear()}`
     return { post }
   },
 }
