@@ -4,23 +4,27 @@
     <div
       class="transition-opacity duration-500 ease-in-out chat invisible opacity-0 fixed bottom-32 right-5 z-30 my-4 w-11/12 md:w-4/12"
     >
-      <div class="form flex flex-col rounded-xl">
+      <div class="form flex flex-col rounded-xl hover:bg-white">
         <div class="header p-4 bg-green-800 text-white rounded-t-lg">
           Contact Me
         </div>
         <div
-          class="form-body flex py-10 px-4 bg-gray-400 items-center rounded-b-lg group-hover:bg-yellow-450"
+          class="form-body flex py-10 px-4 bg-gray-200 items-center rounded-b-lg"
         >
           <div class="input-form">
             <input
+              id="wa-input"
               v-model="text"
-              class="rounded-lg p-2 w-11/12 md:w-full"
+              class="flex-1 appearance-none border border-transparent p-2 w-11/12 md:w-full py-2 px-4 bg-white text-gray-700 placeholder-gray-400 shadow-md rounded-lg text-base focus:outline-none focus:ring-2 focus:ring-purple-600 focus:border-transparent"
               type="text"
+              placeholder="tanya tanya sini ya om..."
             />
           </div>
-          <div class="btn-send flex items-center bg-green-500 rounded-full p-1">
-            <a class="ml-2" :href="apilink" target="_blank">
-              <img class="w-8 h-8 z-50" src="~/assets/icons/send.svg" alt="" />
+          <div
+            class="ml-3 btn-send flex items-center p-2 justify-center hover:bg-gray-300 rounded-full"
+          >
+            <a class="" :href="apilink" target="_blank" @click="text = ''">
+              <img class="w-6 h-6 z-50" src="~/assets/icons/send.svg" alt="" />
             </a>
           </div>
         </div>
