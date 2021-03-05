@@ -148,11 +148,13 @@
               Tenang, jangan khawatir hubungi tim Captain Adventure disini
             </p>
             <div class="cta-btn flex items-center">
-              <button
-                class="m-4 py-3 px-7 md:px-9 bg-yellow-450 font-medium text-base text-center flex items-center justify-center rounded-md"
-              >
-                Call Us
-              </button>
+              <NuxtLink to="/contact">
+                <button
+                  class="m-4 py-3 px-7 md:px-9 bg-yellow-450 font-medium text-base text-center flex items-center justify-center rounded-md"
+                >
+                  Call Us
+                </button>
+              </NuxtLink>
             </div>
           </div>
         </div>
