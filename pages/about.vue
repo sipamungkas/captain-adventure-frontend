@@ -117,7 +117,7 @@
             class="bg-yellow-900 bg-opacity-44 grid-cols-1 h-60 md:h-auto lg:h-auto p-5"
           >
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3955.154550844829!2d110.76976221477668!3d-7.558121994549278!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e7a15d549589f8f%3A0x6786fc41534ba967!2sUniversitas%20Muhammadiyah%20Surakarta!5e0!3m2!1sen!2sid!4v1613522313422!5m2!1sen!2sid"
+              :src="map"
               width="100%"
               height="100%"
               frameborder="0"
@@ -167,11 +167,13 @@
                     <br />
                     Indonesia
                   </p>
-                  <button
-                    class="mx-auto lg:m-0 md:m-0 md:mr-8 lg:mr-8 py-3 px-7 md:px-9 bg-yellow-450 font-medium text-base text-center flex items-center justify-center rounded-md"
-                  >
-                    Kontak
-                  </button>
+                  <NuxtLink to="/contact">
+                    <button
+                      class="mx-auto lg:m-0 md:m-0 md:mr-8 lg:mr-8 py-3 px-7 md:px-9 bg-yellow-450 font-medium text-base text-center flex items-center justify-center rounded-md"
+                    >
+                      Kontak
+                    </button>
+                  </NuxtLink>
                 </div>
               </div>
             </div>
@@ -182,3 +184,25 @@
     <!-- END: Section Offers -->
   </div>
 </template>
+
+<script>
+export default {
+  name: 'AboutPage',
+  data() {
+    return {
+      socials: [],
+      address: [],
+      contacts: [],
+      map: '',
+    }
+  },
+  async fetch() {
+    const api = this.$config.baseAPIURL + 'v1/landing-page/contacts'
+    const res = await this.$axios.$get(api)
+
+    const { data } = res
+
+    this.map = this.$getMap(data.contacts)
+  },
+}
+</script>

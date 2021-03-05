@@ -8,7 +8,7 @@
         </div>
         <div class="maps-content w-full px-4 lg:px-0 my-6">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d126438.33806395526!2d112.56174200322909!3d-7.97846945786652!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd62822063dc2fb%3A0x78879446481a4da2!2sMalang%2C%20Kota%20Malang%2C%20Jawa%20Timur!5e0!3m2!1sid!2sid!4v1613488207487!5m2!1sid!2sid"
+            :src="map"
             class="w-full h-96 lg:h--price-photo"
             frameborder="0"
             style="border: 0"
@@ -32,9 +32,8 @@
                   <h5 class="font-bold text-xl">Lokasi</h5>
                 </div>
                 <div class="contact-items">
-                  <p>
-                    Lokasi kantor pusat berada di Kota Malang, Jawa Timur
-                    Indonesia.
+                  <p v-for="(addr, index) in address" :key="index" class="mb-2">
+                    {{ addr.value }}
                   </p>
                 </div>
               </div>
@@ -47,24 +46,18 @@
                 </div>
                 <div class="contact-items">
                   <ul>
-                    <li class="mb-3 flex items-center">
-                      <img class="mr-4 w-5" src="~/assets/icons/Facebook.svg" />
-                      <p>Captain Adventures</p>
-                    </li>
-                    <li class="mb-3 flex items-center">
-                      <img class="mr-4 w-5" src="~/assets/icons/Gmail.svg" />
-                      <p>captainadventur@gmail.com</p>
-                    </li>
-                    <li class="mb-3 flex items-center">
+                    <li
+                      v-for="(social, index) in socials"
+                      :key="index"
+                      class="mb-3 flex items-center"
+                    >
                       <img
                         class="mr-4 w-5"
-                        src="~/assets/icons/Instagram.svg"
+                        :src="
+                          require(`~/assets/icons/icon-${social.category}.svg`)
+                        "
                       />
-                      <p>CaptAdventurer</p>
-                    </li>
-                    <li class="mb-3 flex items-center">
-                      <img class="mr-4 w-5" src="~/assets/icons/Whatsapp.svg" />
-                      <p>+6281227812003</p>
+                      <p>{{ social.value }}</p>
                     </li>
                   </ul>
                 </div>
@@ -77,13 +70,13 @@
                   <h5 class="font-bold text-xl">Kontak</h5>
                 </div>
                 <div class="contact-items">
-                  <div class="mb-3">
-                    <p class="mb-1 font-semibold">Kontak 1</p>
-                    <p class="mb-1">(021) 888888</p>
-                  </div>
-                  <div class="mb-3">
-                    <p class="mb-1 font-semibold">Kontak 2</p>
-                    <p class="mb-1">(021) 888888</p>
+                  <div
+                    v-for="(contact, index) in contacts"
+                    :key="index"
+                    class="mb-3"
+                  >
+                    <p class="mb-1 font-semibold">Kontak {{ index + 1 }}</p>
+                    <p class="mb-1">{{ contact.value }}</p>
                   </div>
                 </div>
               </div>
@@ -159,3 +152,31 @@
     <!-- END: Contact US -->
   </div>
 </template>
+
+<script>
+export default {
+  name: 'ContactPage',
+  data() {
+    return {
+      socials: [],
+      address: [],
+      contacts: [],
+      map: '',
+    }
+  },
+  async fetch() {
+    const api = this.$config.baseAPIURL + 'v1/landing-page/contacts'
+    const res = await this.$axios.$get(api)
+
+    const { data } = res
+
+    this.socials = data.contacts.filter(
+      (item) => !['map', 'address', 'kontak'].includes(item.category)
+    )
+
+    this.address = data.contacts.filter((item) => item.category === 'address')
+    this.contacts = data.contacts.filter((item) => item.category === 'kontak')
+    this.map = this.$getMap(data.contacts)
+  },
+}
+</script>
