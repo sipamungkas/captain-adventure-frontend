@@ -38,25 +38,25 @@
             </div>
             <div class="program-description mt-10">
               <ul>
-                <li class="mb-5 text-lg font-medium">
+                <li class="mb-5 text-lg font-medium flex items-center">
                   <div
                     class="w-7 h-7 inline-block mr-4 rounded-full border-yellow-900 bg-yellow-900"
                   ></div>
                   Outbound
                 </li>
-                <li class="mb-5 text-lg font-medium">
+                <li class="mb-5 text-lg font-medium flex items-center">
                   <div
                     class="w-7 h-7 inline-block mr-4 rounded-full border-yellow-900 bg-yellow-900"
                   ></div>
                   Rafting
                 </li>
-                <li class="mb-5 text-lg font-medium">
+                <li class="mb-5 text-lg font-medium flex items-center">
                   <div
                     class="w-7 h-7 inline-block mr-4 rounded-full border-yellow-900 bg-yellow-900"
                   ></div>
                   Paintball
                 </li>
-                <li class="mb-5 text-lg font-medium">
+                <li class="mb-5 text-lg font-medium flex items-center">
                   <div
                     class="w-7 h-7 inline-block mr-4 rounded-full border-yellow-900 bg-yellow-900"
                   ></div>
@@ -70,40 +70,34 @@
           <div class="program-text p-10 md:px-28">
             <div class="program-title">
               <h3 class="font-bold text-2xl md:text-4xl text-yellow-900">
-                Adventure
+                Training
               </h3>
             </div>
             <div class="program-description mt-10">
               <p class="font-medium md:text-xl">
-                Adventure memiliki empat buah program unggulan yang menarik dan
-                seru untuk anda nikmati bersama dengan keluarga atau teman
+                Program pembekalan untuk para traveler guna persiapan sebelum
+                berpetualang secara profesional dan aman
               </p>
             </div>
             <div class="program-description mt-10">
               <ul>
-                <li class="mb-5 text-lg font-medium">
+                <li class="mb-5 text-lg font-medium flex items-center">
                   <div
                     class="w-7 h-7 inline-block mr-4 rounded-full border-yellow-900 bg-yellow-900"
                   ></div>
-                  Outbound
+                  Coacing
                 </li>
-                <li class="mb-5 text-lg font-medium">
+                <li class="mb-5 text-lg font-medium flex items-center">
                   <div
                     class="w-7 h-7 inline-block mr-4 rounded-full border-yellow-900 bg-yellow-900"
                   ></div>
-                  Rafting
+                  Knowledge
                 </li>
-                <li class="mb-5 text-lg font-medium">
+                <li class="mb-5 text-lg font-medium flex items-center">
                   <div
                     class="w-7 h-7 inline-block mr-4 rounded-full border-yellow-900 bg-yellow-900"
                   ></div>
-                  Paintball
-                </li>
-                <li class="mb-5 text-lg font-medium">
-                  <div
-                    class="w-7 h-7 inline-block mr-4 rounded-full border-yellow-900 bg-yellow-900"
-                  ></div>
-                  Offroad
+                  Experience
                 </li>
               </ul>
             </div>
