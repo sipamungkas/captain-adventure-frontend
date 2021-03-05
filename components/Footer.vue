@@ -11,21 +11,17 @@
             </div>
             <div class="footer-contact-items my-2">
               <ul>
-                <li class="my-3 flex items-center">
-                  <img src="~/assets/icons/footer-facebook.svg" />
-                  <p class="ml-4">Captain Adventures</p>
-                </li>
-                <li class="my-3 flex items-center">
-                  <img src="~/assets/icons/footer-email.svg" />
-                  <p class="ml-4">captainadventur@gmail.com</p>
-                </li>
-                <li class="my-3 flex items-center">
-                  <img src="~/assets/icons/footer-instagram.svg" />
-                  <p class="ml-4">CaptAdventurer</p>
-                </li>
-                <li class="my-3 flex items-center">
-                  <img src="~/assets/icons/footer-wa.svg" />
-                  <p class="ml-4">+6281227812003</p>
+                <li
+                  v-for="(contact, index) in contacts"
+                  :key="index"
+                  class="my-3 flex items-center"
+                >
+                  <img
+                    :src="
+                      require(`~/assets/icons/footer-${contact.category}.svg`)
+                    "
+                  />
+                  <p class="ml-4">{{ contact.value }}</p>
                 </li>
               </ul>
             </div>
@@ -40,9 +36,12 @@
               class="footer-contact-items my-2 flex flex-col items-center justify-center lg:items-start"
             >
               <img class="w-7 h-7" src="~/assets/icons/footer-address.svg" />
-              <p class="mt-4 text-center lg:text-left">
-                Jalan. Nusantara Sakti No 11. Baturaden Selatan, Purwokerto -
-                Jawa Tengah, Indonesia
+              <p
+                v-for="(addr, index) in address"
+                :key="index"
+                class="mt-4 text-center lg:text-left"
+              >
+                {{ addr.value }}
               </p>
             </div>
           </div>
@@ -63,5 +62,38 @@
     </div>
   </footer>
 </template>
+
+<script>
+export default {
+  name: 'Footer',
+  props: {
+    contacts: {
+      required: true,
+      type: Array,
+      default() {
+        return [
+          {
+            category: 'wa',
+            value: '085248999925',
+          },
+        ]
+      },
+    },
+    address: {
+      required: true,
+      type: Array,
+      default() {
+        return [
+          {
+            category: 'address',
+            value:
+              'Jalan. Nusantara Sakti No 11. Baturaden Selatan, \n Purwokerto - Jawa Tengah,\nIndonesia',
+          },
+        ]
+      },
+    },
+  },
+}
+</script>
 
 <style></style>
