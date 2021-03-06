@@ -42,12 +42,12 @@
         class="flex flex-row items-center justify-center mt-10 md:items-end md:justify-end"
       >
         <button
-          class="px-4 py-2 mx-1 md:px-8 md:py-3 bg-yellow-400 rounded-lg font-normal text-lg"
+          class="hidden px-4 py-2 mx-1 md:px-8 md:py-3 bg-yellow-400 rounded-lg font-normal text-lg"
         >
           Prev
         </button>
         <button
-          class="px-4 py-2 mx-1 md:px-8 md:py-3 bg-yellow-400 rounded-lg font-normal text-lg"
+          class="hidden px-4 py-2 mx-1 md:px-8 md:py-3 bg-yellow-400 rounded-lg font-normal text-lg"
         >
           Next
         </button>
