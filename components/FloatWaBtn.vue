@@ -103,13 +103,18 @@
 
 <script>
 export default {
+  props: {
+    phone: {
+      type: String,
+      default: '6285248999925',
+    },
+  },
   data: () => ({
     fab: false,
     fav: true,
     menu: false,
     message: false,
     hints: true,
-    phone: '6285248999925',
     text: '',
     apilink: '',
   }),
