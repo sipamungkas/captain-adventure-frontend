@@ -3,7 +3,7 @@
     <Navbar />
     <Nuxt />
     <Footer :contacts="contact" :address="address" />
-    <FloatWaBtn />
+    <FloatWaBtn :phone="phoneFab" />
   </div>
 </template>
 
@@ -13,6 +13,7 @@ export default {
     return {
       contact: [],
       address: [],
+      phoneFab: null,
     }
   },
   async fetch() {
@@ -22,9 +23,11 @@ export default {
     const { data } = res
 
     this.contact = data.contacts.filter(
-      (item) => !['map', 'address', 'kontak'].includes(item.category)
+      (item) => !['map', 'address', 'kontak', 'fab-wa'].includes(item.category)
     )
 
+    const [fab] = data.contacts.filter((item) => item.category === 'fab-wa')
+    this.phoneFab = fab?.value
     this.address = data.contacts.filter((item) => item.category === 'address')
   },
 }

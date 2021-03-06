@@ -171,7 +171,7 @@ export default {
     const { data } = res
 
     this.socials = data.contacts.filter(
-      (item) => !['map', 'address', 'kontak'].includes(item.category)
+      (item) => !['map', 'address', 'kontak', 'fab-wa'].includes(item.category)
     )
 
     this.address = data.contacts.filter((item) => item.category === 'address')
