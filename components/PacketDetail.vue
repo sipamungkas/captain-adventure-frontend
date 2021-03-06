@@ -49,11 +49,10 @@
             </div>
           </div>
         </div>
-        <div class="body-content my-4 lg:my-8">
-          <div>
-            {{ packet.description }}
-          </div>
-        </div>
+        <div
+          class="body-content my-4 lg:my-8"
+          v-html="packet.description"
+        ></div>
       </div>
     </div>
   </div>

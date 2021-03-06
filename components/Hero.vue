@@ -24,14 +24,15 @@
             >
               <NuxtLink to="/about">
                 <button
-                  class="mr-8 py-4 px-8 md:px-10 bg-yellow-600 font-semibold text-base text-white text-center flex items-center justify-center rounded-md"
+                  type="button"
+                  class="mr-8 py-4 px-8 md:px-10 bg-yellow-600 hover:bg-yellow-700 font-semibold text-base text-white text-center flex items-center justify-center rounded-md"
                 >
                   Detail
                 </button>
               </NuxtLink>
               <button
                 v-if="item.video"
-                class="index-2 cta-video py-2.5 px-4 border-solid border-4 bg-yellow-600 bg-opacity-50 border-yellow-600 font-semibold text-lg text-white text-center flex items-center justify-center rounded-md"
+                class="index-2 cta-video py-4 px-4 bg-yellow-600 hover:bg-yellow-700 font-semibold text-base text-white text-center flex items-center justify-center rounded-md"
                 :data-content="item.video"
                 @click="popUp"
               >
