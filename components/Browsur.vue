@@ -16,11 +16,13 @@
           </p>
         </div>
         <div class="browsur-cta">
-          <button
-            class="px-6 py-3 md:px-10 md:py-4 bg-yellow-400 rounded-lg font-semibold text-lg"
-          >
-            Download
-          </button>
+          <a :href="$config.baseAPIURL + 'v1/brochures'">
+            <button
+              class="px-6 py-3 md:px-10 md:py-4 bg-yellow-400 rounded-lg font-semibold text-lg"
+            >
+              Download
+            </button>
+          </a>
         </div>
       </div>
     </div>
