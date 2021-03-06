@@ -9,5 +9,7 @@ services:
     ports:
       - 3030:3030
     working_dir: /app
+    environment:
+      - HOST=0.0.0.0
     volumes:
       - ./:/app
