@@ -4,6 +4,6 @@ COPY ["package.json","package.lock.json*","./"]
 RUN npm install
 COPY . ./
 RUN npm run build
-EXPOSE 3001
+EXPOSE 3030
 ENV BASE_API_URL=api.captain-adventure.com
 CMD [ "npm","start" ]

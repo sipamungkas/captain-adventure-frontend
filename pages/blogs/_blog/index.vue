@@ -52,6 +52,7 @@ export default {
     post.dateFormat = `${datePost.getDate()}-${
       datePost.getMonth() + 1
     }-${datePost.getFullYear()}`
+
     return { post }
   },
 }

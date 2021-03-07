@@ -5,13 +5,11 @@ services:
     build: .
     image: node:14.16.0-alpine
     command: sh -c "npm install && npm run build &&
-      NODE_ENV=production npm start"
+      npm start"
     ports:
       - 3030:3030
-    expose:
-      - '3030'
     working_dir: /app
     environment:
-      BASE_API_URL: https://api.captain-adventure.com
+      - HOST=0.0.0.0
     volumes:
       - ./:/app

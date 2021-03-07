@@ -52,6 +52,6 @@ export default {
   },
 
   publicRuntimeConfig: {
-    baseAPIURL: process.env.BASE_API_URL || 'http://localhost:3000/',
+    baseAPIURL: process.env.BASE_API_URL || 'https://api.captain-adventure.com/',
   },
 }
