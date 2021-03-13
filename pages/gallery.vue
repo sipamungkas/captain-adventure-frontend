@@ -63,9 +63,27 @@ export default {
     const res = await $axios.$get(
       `${baseAPIURL}v1/landing-page/galleries?perPage=9`
     )
-    const { galleries } = res.data
+    const { galleries, seo } = res.data
 
-    return { galleries }
+    const desc = seo.filter((item) => item.key === 'description')[0]
+    return { galleries, desc }
+  },
+  head() {
+    return {
+      title: 'Gallery | Captain Adventure',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.desc.value,
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.desc.value,
+        },
+      ],
+    }
   },
 }
 </script>

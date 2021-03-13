@@ -43,17 +43,36 @@
 
 <script>
 export default {
+  name: 'PacketDetailPage',
   async asyncData({ params, $axios, $config: { baseAPIURL } }) {
     const res = await $axios.$get(
       `${baseAPIURL}v1/landing-page/blogs/${params.blog}`
     )
-    const { post } = res.data
+    const { post, seo } = res.data
     const datePost = new Date(post.date)
     post.dateFormat = `${datePost.getDate()}-${
       datePost.getMonth() + 1
     }-${datePost.getFullYear()}`
+    const desc = seo.filter((item) => item.key === 'description')[0]
 
-    return { post }
+    return { post, desc }
+  },
+  head() {
+    return {
+      title: `${this.post.title} | Captain Adventure`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.desc.value,
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.desc.value,
+        },
+      ],
+    }
   },
 }
 </script>

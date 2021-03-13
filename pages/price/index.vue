@@ -12,11 +12,31 @@
 
 <script>
 export default {
+  name: 'PricePage',
   async asyncData({ params, $axios, $config: { baseAPIURL } }) {
     const res = await $axios.$get(`${baseAPIURL}v1/landing-page/categories`)
-    const { categories } = res.data
+    const { categories, seo } = res.data
 
-    return { categories }
+    const desc = seo.filter((item) => item.key === 'description')[0]
+
+    return { categories, desc }
+  },
+  head() {
+    return {
+      title: 'Price | Captain Adventure',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.desc.value,
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.desc.value,
+        },
+      ],
+    }
   },
 }
 </script>

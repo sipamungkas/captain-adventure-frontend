@@ -188,21 +188,31 @@
 <script>
 export default {
   name: 'AboutPage',
-  data() {
-    return {
-      socials: [],
-      address: [],
-      contacts: [],
-      map: '',
-    }
-  },
-  async fetch() {
-    const api = this.$config.baseAPIURL + 'v1/landing-page/contacts'
-    const res = await this.$axios.$get(api)
-
+  async asyncData({ params, $axios, $config: { baseAPIURL }, app, $getMap }) {
+    const res = await $axios.$get(`${baseAPIURL}v1/landing-page/contacts`)
     const { data } = res
 
-    this.map = this.$getMap(data.contacts)
+    const map = $getMap(data.contacts)
+
+    // const desc = data.seo.filter((item) => item.key === 'description')[0]
+    return { map }
+  },
+  head() {
+    return {
+      title: 'About | Captain Adventure',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Captain Adventure About',
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: 'Captain Adventure About',
+        },
+      ],
+    }
   },
 }
 </script>

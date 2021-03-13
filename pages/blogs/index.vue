@@ -82,11 +82,12 @@
 
 <script>
 export default {
+  name: 'BlogPage',
   async asyncData({ params, $axios, $config: { baseAPIURL } }) {
     const res = await $axios.$get(
       `${baseAPIURL}v1/landing-page/blogs?perPage=4`
     )
-    const { posts } = res.data
+    const { posts, seo } = res.data
     posts.forEach((item) => {
       const datePost = new Date(item.date)
       item.dateFormat = `${datePost.getDate()}-${
@@ -96,8 +97,26 @@ export default {
     const firstPostPage = posts.length > 0 ? posts[0] : null
     if (posts.length > 0) posts.shift()
     const blogs = posts
+    const desc = seo.filter((item) => item.key === 'description')[0]
 
-    return { firstPostPage, blogs }
+    return { firstPostPage, blogs, desc }
+  },
+  head() {
+    return {
+      title: `Blog | Captain Adventure`,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.desc.value,
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.desc.value,
+        },
+      ],
+    }
   },
 }
 </script>

@@ -156,27 +156,37 @@
 <script>
 export default {
   name: 'ContactPage',
-  data() {
-    return {
-      socials: [],
-      address: [],
-      contacts: [],
-      map: '',
-    }
-  },
-  async fetch() {
-    const api = this.$config.baseAPIURL + 'v1/landing-page/contacts'
-    const res = await this.$axios.$get(api)
-
+  async asyncData({ params, $axios, $config: { baseAPIURL }, app, $getMap }) {
+    const res = await $axios.$get(`${baseAPIURL}v1/landing-page/contacts`)
     const { data } = res
 
-    this.socials = data.contacts.filter(
+    const socials = data.contacts.filter(
       (item) => !['map', 'address', 'kontak', 'fab-wa'].includes(item.category)
     )
 
-    this.address = data.contacts.filter((item) => item.category === 'address')
-    this.contacts = data.contacts.filter((item) => item.category === 'kontak')
-    this.map = this.$getMap(data.contacts)
+    const address = data.contacts.filter((item) => item.category === 'address')
+    const contacts = data.contacts.filter((item) => item.category === 'kontak')
+    const map = $getMap(data.contacts)
+
+    // const desc = data.seo.filter((item) => item.key === 'description')[0]
+    return { socials, address, contacts, map }
+  },
+  head() {
+    return {
+      title: 'Contact | Captain Adventure',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'Captain Adventure Galleries',
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: 'Captain Adventure Galleries',
+        },
+      ],
+    }
   },
 }
 </script>

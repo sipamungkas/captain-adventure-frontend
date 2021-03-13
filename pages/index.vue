@@ -175,20 +175,29 @@ export default {
     $getAddress,
   }) {
     const res = await $axios.$get(`${baseAPIURL}v1/landing-page/home`)
-    const { heros, testimonials, contacts } = res.data
+    const { heros, testimonials, contacts, seo } = res.data
     const map = $getMap(contacts)
     const contact = $noMap(contacts)
-    return { heros, testimonials, map, contact }
+    const desc = seo.filter((item) => item.key === 'description')[0]
+
+    return { heros, testimonials, map, contact, desc }
   },
-  head: {
-    title: 'Captain Adventure | Adventure with captain',
-    meta: [
-      {
-        hid: 'description',
-        name: 'description',
-        content: 'Home page description',
-      },
-    ],
+  head() {
+    return {
+      title: 'Captain Adventure | Adventure with captain',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: this.desc.value,
+        },
+        {
+          hid: 'og:description',
+          name: 'og:description',
+          content: this.desc.value,
+        },
+      ],
+    }
   },
 }
 </script>
