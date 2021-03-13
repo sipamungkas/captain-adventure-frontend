@@ -37,7 +37,12 @@
                   class="testimoni-buble max-h-full lg:max-w-4xl bg-gray-100 flex p-4"
                 >
                   <div class="customer-picture mr-4">
-                    <div class="w-10 h-10 rounded-full bg-gray-700"></div>
+                    <div class="w-20 h-20 rounded-full bg-gray-700">
+                      <img
+                        :src="$config.baseAPIURL + testimoni.image"
+                        alt="img testimoni"
+                      />
+                    </div>
                   </div>
                   <div class="customer-detail">
                     <div class="customer-name font-semibold mb-2">
@@ -52,6 +57,11 @@
                       /></span>
                       <p class="relative top-1 lg:max-w-3xl p-2">
                         {{ testimoni.testimoni }}
+                      </p>
+                    </div>
+                    <div>
+                      <p class="text-gray-400 ml-2">
+                        - {{ testimoni.position }}
                       </p>
                     </div>
                   </div>
