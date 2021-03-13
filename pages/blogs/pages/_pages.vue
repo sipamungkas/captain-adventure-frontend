@@ -97,7 +97,9 @@ export default {
   name: 'BlogPage',
   async asyncData({ params, $axios, $config: { baseAPIURL } }) {
     const res = await $axios.$get(
-      `${baseAPIURL}v1/landing-page/blogs?perPage=4`
+      `${baseAPIURL}v1/landing-page/blogs?perPage=4&page=${
+        params.pages ? params.pages : 1
+      }`
     )
     const { posts, seo } = res.data
     posts.forEach((item) => {
@@ -111,11 +113,11 @@ export default {
     const blogs = posts
     const desc = seo.filter((item) => item.key === 'description')[0]
 
-    const page = 1
+    const page = params.pages ? params.pages : 1
     const prev = !(page <= 1)
     const next = res.total - 4 * page > 0
 
-    return { firstPostPage, blogs, desc, prev, next, page }
+    return { firstPostPage, blogs, desc, page, prev, next }
   },
   head() {
     return {

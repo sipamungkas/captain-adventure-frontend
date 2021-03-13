@@ -41,16 +41,28 @@
       <div
         class="flex flex-row items-center justify-center mt-10 md:items-end md:justify-end"
       >
-        <button
-          class="hidden px-4 py-2 mx-1 md:px-8 md:py-3 bg-yellow-400 rounded-lg font-normal text-lg"
+        <NuxtLink
+          :to="'/gallery/pages/' + (parseInt(page) - 1)"
+          :class="{ disabled: !prev }"
         >
-          Prev
-        </button>
-        <button
-          class="hidden px-4 py-2 mx-1 md:px-8 md:py-3 bg-yellow-400 rounded-lg font-normal text-lg"
+          <button
+            class="px-4 py-2 mx-1 md:px-8 md:py-3 rounded-lg font-normal text-lg"
+            :class="{ 'bg-gray-500': !prev, 'bg-yellow-400': prev }"
+          >
+            Prev
+          </button>
+        </NuxtLink>
+        <NuxtLink
+          :to="'/gallery/pages/' + (parseInt(page) + 1)"
+          :class="{ disabled: !next }"
         >
-          Next
-        </button>
+          <button
+            class="px-4 py-2 mx-1 md:px-8 md:py-3 rounded-lg font-normal text-lg"
+            :class="{ 'bg-gray-500': !next, 'bg-yellow-400': next }"
+          >
+            Next
+          </button>
+        </NuxtLink>
       </div>
       <!-- END: pagination -->
     </div>
@@ -59,14 +71,21 @@
 
 <script>
 export default {
-  async asyncData({ params, $axios, $config: { baseAPIURL } }) {
+  name: 'GalleryPage',
+  async asyncData({ query, params, $axios, $config: { baseAPIURL } }) {
     const res = await $axios.$get(
-      `${baseAPIURL}v1/landing-page/galleries?perPage=9`
+      `${baseAPIURL}v1/landing-page/galleries?perPage=9&page=${
+        params.pages ? params.pages : 1
+      }`
     )
-    const { galleries, seo } = res.data
 
+    const { galleries, seo } = res.data
     const desc = seo.filter((item) => item.key === 'description')[0]
-    return { galleries, desc }
+    const page = params.pages ? params.pages : 1
+    const prev = !(page <= 1)
+    const next = res.total - 9 * page > 0
+
+    return { galleries, desc, next, prev, page }
   },
   head() {
     return {
@@ -87,3 +106,9 @@ export default {
   },
 }
 </script>
+
+<style lang="css" scoped>
+.disabled {
+  pointer-events: none;
+}
+</style>
