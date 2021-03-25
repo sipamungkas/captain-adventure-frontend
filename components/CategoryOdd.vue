@@ -23,7 +23,7 @@
               {{ category.name }}
             </h4>
             <p class="font-medium text-medium lg:text-xl">
-              {{ odd + 1 }} Paket
+              {{ category.packets_count }} Paket
             </p>
           </div>
           <div class="category-cta">
