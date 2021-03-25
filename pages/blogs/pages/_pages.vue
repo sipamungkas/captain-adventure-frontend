@@ -10,7 +10,7 @@
         <div>
           <img
             class="object-cover mt-6 rounded-md w-full h-72 lg:h-96"
-            src="~/assets/images/gallery-item1.png"
+            :src="$config.baseAPIURL + firstPostPage.image"
             alt=""
           />
           <h4 class="text-xl font-semibold mt-4">
