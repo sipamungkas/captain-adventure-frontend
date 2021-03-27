@@ -1,7 +1,13 @@
 <template>
   <div class="category-contents">
-    <section class="w-full my-8">
+    <section v-if="packets.length > 0" class="w-full my-8">
       <Packets :packets="packets" />
+    </section>
+
+    <section v-else class="w-full my-8">
+      <div class="text-3xl font-bold text-gray-400">
+        Maaf Kategori ini belum memiliki paket :(
+      </div>
     </section>
 
     <section class="w-full">
@@ -19,12 +25,14 @@ export default {
     )
     const { packets, seo } = res.data
     const desc = seo.filter((item) => item.key === 'description')[0]
+    const categoryName =
+      packets.length > 0 ? packets[0].category.name : 'Category'
 
-    return { packets, desc }
+    return { packets, desc, categoryName }
   },
   head() {
     return {
-      title: `${this.packets[0].category.name} | Captain Adventure`,
+      title: `${this.categoryName} | Captain Adventure`,
       meta: [
         {
           hid: 'description',
