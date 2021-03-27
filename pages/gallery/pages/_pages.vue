@@ -5,7 +5,7 @@
         class="greeting-page text-center flex flex-col justify-center items-center"
       >
         <div class="price-title">
-          <h1 class="font-bold text-3xl md:text-5xl">Gallery</h1>
+          <h1 class="font-bold text-3xl md:text-4xl">Gallery</h1>
         </div>
         <div class="price-description w-full lg:w-1/2">
           <h6 class="my-4 font-normal text-lg md:text-xl">
