@@ -5,12 +5,12 @@
 
       <section
         v-if="firstPostPage"
-        class="flex flex-col lg:flex-row justify-between"
+        class="grid grid-col-1 lg:grid-col-2 gap-10 lg:gap-24"
       >
         <div>
           <img
             class="object-cover mt-6 rounded-md w-full h-72 lg:h-96"
-            src="~/assets/images/gallery-item1.png"
+            :to="'/blogs/' + firstPostPage.slug"
             alt=""
           />
           <h4 class="text-xl font-semibold mt-4">

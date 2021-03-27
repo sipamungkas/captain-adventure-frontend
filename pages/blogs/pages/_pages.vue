@@ -5,7 +5,7 @@
 
       <section
         v-if="firstPostPage"
-        class="flex flex-col lg:flex-row justify-between"
+        class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24"
       >
         <div>
           <img
