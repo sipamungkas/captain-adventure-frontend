@@ -104,9 +104,9 @@ export default {
     const { posts, seo } = res.data
     posts.forEach((item) => {
       const datePost = new Date(item.date)
-      item.dateFormat = `${datePost.getDate()}-${
+      item.dateFormat = `${datePost.getDate()} - ${
         datePost.getMonth() + 1
-      }-${datePost.getFullYear()}`
+      } - ${datePost.getFullYear()}`
     })
     const firstPostPage = posts.length > 0 ? posts[0] : null
     if (posts.length > 0) posts.shift()
