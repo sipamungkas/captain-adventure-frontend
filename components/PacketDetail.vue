@@ -6,7 +6,7 @@
           <div class="packet-image lg:mr-16 lg:w--price">
             <img
               class="object-cover w-full lg:w--price h-96"
-              src="~/assets/images/gallery-item1.png"
+              :src="$config.baseAPIURL + packet.image"
               alt=""
             />
           </div>
@@ -21,36 +21,24 @@
             </div>
             <div class="packet-poins">
               <ul v-if="packet.perks">
-                <li class="flex items-center my-4">
+                <li
+                  v-for="(perks, index) in packet.perks.split(',')"
+                  :key="index"
+                  class="flex items-center my-4"
+                >
                   <div
                     class="inline-block w-5 h-5 bg-yellow-900 rounded-full mr-4"
                   ></div>
-                  <p class="font-semibold text-medium lg:text-lg">Testing</p>
-                </li>
-                <li class="flex items-center my-4">
-                  <div
-                    class="inline-block w-5 h-5 bg-yellow-900 rounded-full mr-4"
-                  ></div>
-                  <p class="font-semibold text-medium lg:text-lg">Testing</p>
-                </li>
-                <li class="flex items-center my-4">
-                  <div
-                    class="inline-block w-5 h-5 bg-yellow-900 rounded-full mr-4"
-                  ></div>
-                  <p class="font-semibold text-medium lg:text-lg">Testing</p>
-                </li>
-                <li class="flex items-center my-4">
-                  <div
-                    class="inline-block w-5 h-5 bg-yellow-900 rounded-full mr-4"
-                  ></div>
-                  <p class="font-semibold text-medium lg:text-lg">Testing</p>
+                  <p class="font-semibold text-medium lg:text-lg">
+                    {{ perks }}
+                  </p>
                 </li>
               </ul>
             </div>
           </div>
         </div>
         <div
-          class="body-content my-4 lg:my-8"
+          class="body-content my-4 lg:my-8 break-words"
           v-html="packet.description"
         ></div>
       </div>

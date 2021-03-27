@@ -38,7 +38,7 @@
                   </div>
                 </div>
                 <img
-                  src="~/assets/images/Rafting.png"
+                  :src="$config.baseAPIURL + packet.image"
                   class="object-cover w-full h-96 lg:w--category-lg rounded-xl"
                   alt=""
                 />
