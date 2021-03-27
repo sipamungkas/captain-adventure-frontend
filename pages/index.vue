@@ -41,6 +41,7 @@
                       <img
                         :src="$config.baseAPIURL + testimoni.image"
                         alt="img testimoni"
+                        class="w-20 h-20 object-cover rounded-full"
                       />
                     </div>
                   </div>
