@@ -16,7 +16,7 @@
         </div>
 
         <div
-          class="my-4 mx-4 lg:mx-8 text-justify body-content"
+          class="my-4 mx-4 lg:mx-8 text-justify body-content break-words"
           v-html="post.body"
         ></div>
       </div>
