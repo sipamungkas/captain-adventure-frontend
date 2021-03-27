@@ -18,42 +18,42 @@
               <NuxtLink
                 class="h-nav w-24 flex items-center justify-center mr-6 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
                 to="/home"
-                >Home</NuxtLink
+                >HOME</NuxtLink
               >
             </li>
             <li class="nav">
               <NuxtLink
                 class="h-nav w-24 flex items-center justify-center mr-6 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
                 to="/price"
-                >Price</NuxtLink
+                >PRICE</NuxtLink
               >
             </li>
             <li class="nav">
               <NuxtLink
                 class="h-nav w-24 flex items-center justify-center mr-6 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
                 to="/about"
-                >About</NuxtLink
+                >ABOUT</NuxtLink
               >
             </li>
             <li class="nav">
               <NuxtLink
                 class="h-nav w-24 flex items-center justify-center mr-6 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
                 to="/contact"
-                >Contact</NuxtLink
+                >CONTACT</NuxtLink
               >
             </li>
             <li class="nav">
               <NuxtLink
                 class="h-nav w-24 flex items-center justify-center mr-6 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
                 to="/gallery"
-                >Gallery</NuxtLink
+                >GALLERY</NuxtLink
               >
             </li>
             <li class="nav">
               <NuxtLink
                 class="h-nav w-24 flex items-center justify-center py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
                 to="/blogs"
-                >Blog</NuxtLink
+                >BLOG</NuxtLink
               >
             </li>
           </ul>
@@ -96,42 +96,42 @@
               <NuxtLink
                 to="/home"
                 class="h-14 flex justify-start items-center text-white text-xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2 w-full"
-                >Home</NuxtLink
+                >HOME</NuxtLink
               >
             </li>
             <li class="">
               <NuxtLink
                 to="/price"
                 class="h-14 flex justify-start items-center text-white text-xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2 w-full"
-                >Price</NuxtLink
+                >PRICE</NuxtLink
               >
             </li>
             <li class="">
               <NuxtLink
                 to="/about"
                 class="h-14 flex justify-start items-center text-white text-xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2 w-full"
-                >About</NuxtLink
+                >ABOUT</NuxtLink
               >
             </li>
             <li class="">
               <NuxtLink
                 to="/contact"
                 class="h-14 flex justify-start items-center text-white text-xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2 w-full"
-                >Contact</NuxtLink
+                >CONTACT</NuxtLink
               >
             </li>
             <li class="">
               <NuxtLink
                 to="/gallery"
                 class="h-14 flex justify-start items-center text-white text-xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2 w-full"
-                >Gallery</NuxtLink
+                >GALLERY</NuxtLink
               >
             </li>
             <li class="">
               <NuxtLink
                 to="/blogs"
                 class="h-14 flex justify-start items-center text-white text-xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2 w-full"
-                >Blog</NuxtLink
+                >BLOG</NuxtLink
               >
             </li>
           </ul>
