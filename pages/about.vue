@@ -139,12 +139,12 @@
                   class="absolute mt-1"
                   alt=""
                 />
-                <p class="text-left ml-10">
-                  Jalan. Nusantara Sakti No 11. Baturaden Selatan,
-                  <br />
-                  Purwokerto - Jawa Tengah,
-                  <br />
-                  Indonesia
+                <p
+                  v-for="(addr, index) in address"
+                  :key="index"
+                  class="text-left ml-10"
+                >
+                  {{ addr.value }}
                 </p>
               </div>
             </div>
@@ -160,12 +160,12 @@
                     class="absolute mt-1"
                     alt=""
                   />
-                  <p class="text-left ml-10 mb-5">
-                    Jalan. Nusantara Sakti No 11. Baturaden Selatan,
-                    <br />
-                    Purwokerto - Jawa Tengah,
-                    <br />
-                    Indonesia
+                  <p
+                    v-for="(contact, index) in contacts"
+                    :key="index"
+                    class="text-left ml-10 mb-5"
+                  >
+                    {{ contact.value }}
                   </p>
                   <NuxtLink to="/contact">
                     <button
@@ -192,10 +192,12 @@ export default {
     const res = await $axios.$get(`${baseAPIURL}v1/landing-page/contacts`)
     const { data } = res
 
+    const address = data.contacts.filter((item) => item.category === 'address')
+    const contacts = data.contacts.filter((item) => item.category === 'kontak')
     const map = $getMap(data.contacts)
 
     // const desc = data.seo.filter((item) => item.key === 'description')[0]
-    return { map }
+    return { map, address, contacts }
   },
   head() {
     return {
