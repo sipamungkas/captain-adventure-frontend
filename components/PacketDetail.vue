@@ -13,11 +13,13 @@
           <div
             class="lg:flex-none packet-introducing flex flex-col mt-4 lg:mt-0 lg:max-w-md"
           >
-            <div class="packet-title mb-7">
+            <div class="packet-title mb-7 break-words">
               <h1 class="font-bold text-3xl md:text-4xl">{{ packet.title }}</h1>
             </div>
-            <div class="packet-short-description">
-              <p class="font-medium text-base lg:text-lg"></p>
+            <div class="packet-short-description break-words">
+              <p class="font-medium text-base lg:text-lg">
+                {{ packet.short_description }}
+              </p>
             </div>
             <div class="packet-poins">
               <ul v-if="packet.perks">
@@ -38,7 +40,7 @@
           </div>
         </div>
         <div
-          class="body-content my-4 lg:my-8 break-words"
+          class="body-content my-4 lg:my-8 break-words prose"
           v-html="packet.description"
         ></div>
       </div>

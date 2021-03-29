@@ -15,21 +15,6 @@ nav * {
   font-family: 'roboto', sans-serif;
 }
 
-.body-content h1 {
-  @apply font-bold text-lg;
-}
-
-.body-content h2 {
-  @apply font-bold text-base;
-}
-
-.body-content h3,
-h4,
-h5,
-h6 {
-  @apply font-semibold text-base;
-}
-
 .nav .nuxt-link-active {
   @apply rounded-b-3xl bg-white text-yellow-900 font-bold px-2;
 }
@@ -41,7 +26,7 @@ h6 {
 @layer components {
   @responsive {
     .h-screen-80 {
-      height: 80vh;
+      height: 60vh;
     }
     .h-nav {
       height: 4.375rem;
