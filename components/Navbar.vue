@@ -16,42 +16,42 @@
           >
             <li class="nav">
               <NuxtLink
-                class="h-nav w-24 flex items-center justify-center mr-6 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                class="h-nav w-28 flex items-center justify-center mr-2 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
                 to="/home"
                 >HOME</NuxtLink
               >
             </li>
             <li class="nav">
               <NuxtLink
-                class="h-nav w-24 flex items-center justify-center mr-6 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
-                to="/price"
-                >PRICE</NuxtLink
+                class="h-nav w-28 flex items-center justify-center mr-2 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                to="/program"
+                >PROGRAM</NuxtLink
               >
             </li>
             <li class="nav">
               <NuxtLink
-                class="h-nav w-24 flex items-center justify-center mr-6 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                class="h-nav w-28 flex items-center justify-center mr-2 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
                 to="/about"
                 >ABOUT</NuxtLink
               >
             </li>
             <li class="nav">
               <NuxtLink
-                class="h-nav w-24 flex items-center justify-center mr-6 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                class="h-nav w-28 flex items-center justify-center mr-2 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
                 to="/contact"
                 >CONTACT</NuxtLink
               >
             </li>
             <li class="nav">
               <NuxtLink
-                class="h-nav w-24 flex items-center justify-center mr-6 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                class="h-nav w-28 flex items-center justify-center mr-2 py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
                 to="/gallery"
                 >GALLERY</NuxtLink
               >
             </li>
             <li class="nav">
               <NuxtLink
-                class="h-nav w-24 flex items-center justify-center py-6 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
+                class="h-nav w-28 flex items-center justify-center py-2 md:py-0 text-xl md:rounded-b-3xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2"
                 to="/blogs"
                 >BLOG</NuxtLink
               >
@@ -101,9 +101,9 @@
             </li>
             <li class="">
               <NuxtLink
-                to="/price"
+                to="/program"
                 class="h-14 flex justify-start items-center text-white text-xl hover:bg-white hover:text-yellow-900 hover:font-bold px-2 w-full"
-                >PRICE</NuxtLink
+                >PROGRAM</NuxtLink
               >
             </li>
             <li class="">

@@ -27,7 +27,7 @@
             </p>
           </div>
           <div class="category-cta">
-            <NuxtLink :to="'/price/' + category.slug"
+            <NuxtLink :to="'/program/' + category.slug"
               ><button
                 class="px-6 py-3 md:px-8 md:py-4 bg-yellow-400 rounded-lg font-semibold text-lg"
               >

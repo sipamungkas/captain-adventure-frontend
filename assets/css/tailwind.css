@@ -26,7 +26,7 @@ nav * {
 @layer components {
   @responsive {
     .h-screen-80 {
-      height: 80vh;
+      height: 60vh;
     }
     .h-nav {
       height: 4.375rem;

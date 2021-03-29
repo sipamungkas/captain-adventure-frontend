@@ -47,7 +47,7 @@
                 >
                   <NuxtLink
                     class="absolute bottom-5"
-                    :to="'/price/' + packet.category.slug + '/' + packet.slug"
+                    :to="'/program/' + packet.category.slug + '/' + packet.slug"
                   >
                     <button
                       class="px-6 py-3 md:px-10 md:py-4 bg-yellow-400 rounded-lg font-semibold text-lg"

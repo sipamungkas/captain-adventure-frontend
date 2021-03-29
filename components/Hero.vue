@@ -10,29 +10,29 @@
             class="inset-0 hero-caption absolute container mx-auto px-4 z-20"
           >
             <h1
-              class="text-white mt-6 md:mt-10 lg:mt-20 text-3xl md:text-5xl font-bold"
+              class="text-white mt-6 md:mt-10 lg:mt-20 text-2xl md:text-5xl font-bold"
             >
               {{ item.title }}
             </h1>
             <h5
-              class="text-white mt-5 text-lg md:text-2xl font-medium md:w-2/3 lg:w-1/2 text-justify"
+              class="text-white mt-5 text-base md:text-2xl font-medium md:w-2/3 lg:w-1/2 text-justify"
             >
               {{ item.short_description }}
             </h5>
             <div
-              class="flex items-center justify-center md:justify-start mt-14"
+              class="flex items-center justify-center md:justify-start mt-8 md:mt-14"
             >
               <NuxtLink to="/about">
                 <button
                   type="button"
-                  class="mr-8 py-4 px-8 md:px-10 bg-yellow-600 hover:bg-yellow-700 font-semibold text-base text-white text-center flex items-center justify-center rounded-md"
+                  class="py-4 px-8 md:px-10 bg-yellow-600 hover:bg-yellow-700 font-semibold text-base text-white text-center flex items-center justify-center rounded-md"
                 >
                   Detail
                 </button>
               </NuxtLink>
               <button
                 v-if="item.video"
-                class="index-2 cta-video py-4 px-4 bg-yellow-600 hover:bg-yellow-700 font-semibold text-base text-white text-center flex items-center justify-center rounded-md"
+                class="index-2 cta-video ml-8 py-4 px-4 bg-yellow-600 hover:bg-yellow-700 font-semibold text-base text-white text-center flex items-center justify-center rounded-md"
                 :data-content="item.video"
                 @click="popUp"
               >
