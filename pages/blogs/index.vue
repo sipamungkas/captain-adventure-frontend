@@ -5,7 +5,7 @@
 
       <section
         v-if="firstPostPage"
-        class="grid grid-col-1 lg:grid-col-2 gap-10 lg:gap-24"
+        class="grid grid-col-1 lg:grid-col-2 gap-8 lg:gap-16"
       >
         <div>
           <img
@@ -102,9 +102,9 @@ export default {
     const { posts, seo } = res.data
     posts.forEach((item) => {
       const datePost = new Date(item.date)
-      item.dateFormat = `${datePost.getDate()}-${
+      item.dateFormat = `${datePost.getDate()} - ${
         datePost.getMonth() + 1
-      }-${datePost.getFullYear()}`
+      } - ${datePost.getFullYear()}`
     })
     const firstPostPage = posts.length > 0 ? posts[0] : null
     if (posts.length > 0) posts.shift()

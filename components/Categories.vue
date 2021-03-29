@@ -2,7 +2,7 @@
   <div class="container mx-auto">
     <div class="category-wrapper mx-4">
       <div class="price-title">
-        <h1 class="font-bold text-3xl md:text-5xl">Harga Paket</h1>
+        <h1 class="font-bold text-3xl md:text-4xl">Daftar Kategori Program</h1>
       </div>
       <div class="price-description">
         <h6 class="my-4 font-normal text-lg md:text-xl max-w-full md:w-7/12">

@@ -18,7 +18,7 @@
             class="category-detail w-48 mb-2 flex flex-col items-center lg:items-start justify-center text-white"
           >
             <h4
-              class="font-semibold text-xl text-center lg:text-3xl lg:text-left"
+              class="font-semibold text-xl text-center lg:text-2xl lg:text-left mb-2"
             >
               {{ category.name }}
             </h4>
