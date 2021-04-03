@@ -16,7 +16,7 @@
       </div>
       <div class="price-list my-4">
         <div
-          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8"
+          class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-4"
         >
           <div
             v-for="gallery in galleries"
@@ -24,12 +24,10 @@
             class="gallery-item"
           >
             <div class="w-full relative">
-              <div class="w-full relative image-gallery">
+              <div class="w-full relative image-gallery flex justify-center">
                 <img
                   :src="$config.baseAPIURL + gallery.image"
-                  width="400px"
-                  height="350px"
-                  class="object-cover w-full h-96"
+                  class="object-cover w-60 h-60 lg:w-96 lg:h-80 rounded-xl"
                   alt=""
                 />
               </div>

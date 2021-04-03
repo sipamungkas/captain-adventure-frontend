@@ -24,12 +24,10 @@
             class="gallery-item"
           >
             <div class="w-full relative">
-              <div class="w-full relative image-gallery">
+              <div class="w-full relative image-gallery flex justify-center">
                 <img
                   :src="$config.baseAPIURL + gallery.image"
-                  width="400px"
-                  height="350px"
-                  class="object-cover w-full h-96"
+                  class="object-cover w-60 h-60 lg:w-96 lg:h-80 rounded-xl"
                   alt=""
                 />
               </div>
