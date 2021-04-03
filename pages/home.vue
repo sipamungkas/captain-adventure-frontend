@@ -56,7 +56,7 @@
                           src="~/assets/icons/Icon Testimonial.png"
                           alt=""
                       /></span>
-                      <p class="relative top-1 lg:max-w-3xl p-2">
+                      <p class="relative top-1 lg:max-w-3xl p-2 break-words">
                         {{ testimoni.testimoni }}
                       </p>
                     </div>
