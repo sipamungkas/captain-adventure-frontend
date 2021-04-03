@@ -102,7 +102,7 @@
             </defs>
           </svg>
           <svg
-            class="opacity-0 scale-0 close transition transform absolute top-2 left-2"
+            class="opacity-0 scale-0 close transition transform absolute top-1 left-1 md:top-2 md:left-2"
             width="30"
             height="30"
             viewBox="0 0 13 13"
