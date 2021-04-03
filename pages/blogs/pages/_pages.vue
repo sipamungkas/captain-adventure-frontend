@@ -16,9 +16,6 @@
           <h4 class="text-xl font-semibold mt-4">
             {{ firstPostPage.title }}
           </h4>
-          <p class="mt-2 text-sm">
-            {{ firstPostPage.short_description }}
-          </p>
           <div class="flex mt-4">
             <p class="text-sm">{{ firstPostPage.dateFormat }}</p>
             <NuxtLink
@@ -46,9 +43,6 @@
               <h4 class="text-xl font-semibold mt-4">
                 {{ blog.title }}
               </h4>
-              <p class="mt-2 text-sm">
-                {{ blog.short_description }}
-              </p>
               <div class="flex">
                 <p class="text-sm">{{ blog.dateFormat }}</p>
                 <NuxtLink
