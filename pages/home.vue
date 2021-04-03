@@ -34,7 +34,7 @@
                 <div
                   v-for="testimoni in testimonials"
                   :key="testimoni.id"
-                  class="testimoni-buble max-h-full lg:max-w-4xl bg-gray-100 flex p-4"
+                  class="testimoni-buble max-h-full lg:w-full bg-gray-100 flex p-4"
                 >
                   <div class="customer-picture mr-4">
                     <div class="w-20 h-20 rounded-full bg-gray-700">
@@ -45,7 +45,7 @@
                       />
                     </div>
                   </div>
-                  <div class="customer-detail">
+                  <div class="customer-detail w-11/12">
                     <div class="customer-name font-semibold mb-2">
                       {{ testimoni.name }}
                     </div>
@@ -56,7 +56,7 @@
                           src="~/assets/icons/Icon Testimonial.png"
                           alt=""
                       /></span>
-                      <p class="relative top-1 lg:max-w-3xl p-2 break-words">
+                      <p class="relative top-1 w-56 md:w-11/12 p-2 break-words">
                         {{ testimoni.testimoni }}
                       </p>
                     </div>
