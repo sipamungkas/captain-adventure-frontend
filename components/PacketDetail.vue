@@ -40,7 +40,7 @@
           </div>
         </div>
         <div
-          class="body-content my-4 lg:my-8 break-words prose"
+          class="body-content my-4 lg:my-8 break-words max-w-none prose lg:prose-lg"
           v-html="packet.description"
         ></div>
       </div>

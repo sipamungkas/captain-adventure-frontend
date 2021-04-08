@@ -16,7 +16,7 @@
         </div>
 
         <div
-          class="my-4 mx-4 lg:mx-8 text-justify body-content break-words prose"
+          class="my-4 mx-4 lg:mx-8 text-justify body-content break-words max-w-none prose lg:prose-lg"
           v-html="post.body"
         ></div>
       </div>
