@@ -89,65 +89,7 @@
     <!-- START: Contact US -->
     <section class="w-full">
       <hr />
-      <div class="container mx-auto my-12 px-4 lg:px-0">
-        <div class="form-header">
-          <h2 class="font-bold text-2xl md:text-3xl">Formulir Pertanyaan</h2>
-        </div>
-        <div class="form-content flex items-center">
-          <div class="form-image w-full py-14 mr-10 hidden lg:inline-flex">
-            <img
-              class="max-w-lg lg:h--30 object-cover"
-              src="~/assets/images/Mobil.png"
-              alt=""
-            />
-          </div>
-          <div class="form-wrapper w-full">
-            <div class="form-input bg-gray-100 mt-4 lg:mt-0 py-16 px-6">
-              <div class="form-group my-3">
-                <label class="text-lg" for="">Name</label>
-                <div class="mt-3">
-                  <input
-                    id=""
-                    class="py-2 rounded-md w-full lg:w-1/2"
-                    type=" text"
-                    name=""
-                  />
-                </div>
-              </div>
-              <div class="form-group my-3">
-                <label class="text-lg" for="">Email</label>
-                <div class="mt-3">
-                  <input
-                    id=""
-                    class="py-2 rounded-md w-full lg:w-1/2"
-                    type=" text"
-                    name=""
-                  />
-                </div>
-              </div>
-              <div class="form-group my-3">
-                <label class="text-lg" for="">Message</label>
-                <div class="mt-3">
-                  <textarea
-                    id=""
-                    cols="8"
-                    class="py-2 rounded-md w-full h-52"
-                    type="text"
-                    name=""
-                  ></textarea>
-                </div>
-              </div>
-              <div class="form-group mt-16">
-                <button
-                  class="px-6 py-3 md:px-8 md:py-4 bg-yellow-400 rounded-lg font-semibold text-lg"
-                >
-                  Kirim
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <Formulir />
     </section>
     <!-- END: Contact US -->
   </div>
