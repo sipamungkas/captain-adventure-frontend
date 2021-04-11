@@ -15,23 +15,7 @@
         </div>
       </div>
       <div class="price-list my-4">
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
-          <div
-            v-for="gallery in galleries"
-            :key="gallery.id"
-            class="gallery-item"
-          >
-            <div class="w-full relative">
-              <div class="w-full relative image-gallery flex justify-center">
-                <img
-                  :src="$config.baseAPIURL + gallery.image"
-                  class="object-cover w-60 h-60 md:w-full lg:h-80 rounded-xl"
-                  alt=""
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        <Galleries :galleries="galleries" />
       </div>
       <!-- START: pagination -->
       <div
