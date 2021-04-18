@@ -190,12 +190,13 @@ export default {
     const map = $getMap(contacts)
     const contact = $noMap(contacts)
     const desc = seo.filter((item) => item.key === 'description')[0]
+    const title = seo.filter((item) => item.key === 'title')[0]
 
-    return { heros, testimonials, map, contact, desc }
+    return { heros, testimonials, map, contact, desc, title }
   },
   head() {
     return {
-      title: 'Captain Adventure | Adventure with captain',
+      title: `${this.title.value}`,
       meta: [
         {
           hid: 'description',

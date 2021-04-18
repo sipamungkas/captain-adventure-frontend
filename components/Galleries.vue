@@ -10,14 +10,14 @@
     </no-ssr>
     <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
       <li
-        v-for="(url, indexGallery) in urls"
+        v-for="(gallery, indexGallery) in galleries"
         :key="indexGallery"
         @click="index = indexGallery"
       >
         <img
-          :src="$config.baseAPIURL + url"
+          :src="$config.baseAPIURL + gallery.image"
           class="gallery-image object-cover w-60 h-60 md:w-full lg:h-80 rounded-xl"
-          alt=""
+          :alt="gallery.alt"
         />
       </li>
     </ul>

@@ -120,12 +120,12 @@ export default {
         {
           hid: 'description',
           name: 'description',
-          content: 'Captain Adventure Galleries',
+          content: 'Captain Adventure Contacts',
         },
         {
           hid: 'og:description',
           name: 'og:description',
-          content: 'Captain Adventure Galleries',
+          content: 'Captain Adventure Contacts',
         },
       ],
     }
