@@ -41,6 +41,7 @@ export default {
   pwa: {
     manifest: {
       lang: 'en',
+      display: 'browser'
     },
   },
 
