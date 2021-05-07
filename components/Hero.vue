@@ -5,7 +5,7 @@
       class="h-screen-80 md:h--30 lg:h--packet-photo flex items-center relative swiper-container"
     >
       <div class="swiper-wrapper relative">
-        <div v-for="item in hero" :key="item.id" class="swiper-slide relative">
+        <div v-for="item in heros" :key="item.id" class="swiper-slide relative">
           <div
             class="inset-0 hero-caption absolute container mx-auto px-4 z-20"
           >
@@ -22,7 +22,10 @@
             <div
               class="flex items-center justify-center md:justify-start mt-8 md:mt-14"
             >
-              <NuxtLink to="/about">
+              <NuxtLink
+                :to="item.link ? item.link : '/about'"
+                v-if="item.internal"
+              >
                 <button
                   type="button"
                   class="py-4 px-8 md:px-10 bg-yellow-600 hover:bg-yellow-700 font-semibold text-base text-white text-center flex items-center justify-center rounded-md"
@@ -30,6 +33,14 @@
                   Detail
                 </button>
               </NuxtLink>
+              <a :href="item.link" v-else>
+                <button
+                  type="button"
+                  class="py-4 px-8 md:px-10 bg-yellow-600 hover:bg-yellow-700 font-semibold text-base text-white text-center flex items-center justify-center rounded-md"
+                >
+                  Detail
+                </button>
+              </a>
               <button
                 v-if="item.video"
                 class="index-2 cta-video ml-8 py-4 px-4 bg-yellow-600 hover:bg-yellow-700 font-semibold text-base text-white text-center flex items-center justify-center rounded-md"
@@ -94,6 +105,24 @@ export default {
         },
       },
     }
+  },
+  computed: {
+    heros() {
+      return this.hero.map((item) => {
+        if (item.link) {
+          if (item.link.includes(this.$config.baseURL)) {
+            item.link = item.link.substring(this.$config.baseURL.length)
+            item.internal = true
+          } else {
+            item.internal = false
+          }
+        } else {
+          item.internal = true
+        }
+
+        return item
+      })
+    },
   },
   methods: {
     popUp(event) {
