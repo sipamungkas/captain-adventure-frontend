@@ -54,5 +54,6 @@ export default {
 
   publicRuntimeConfig: {
     baseAPIURL: process.env.BASE_API_URL || 'https://api.captain-adventure.com/',
+    baseURL: process.env.BASE_URL || 'https://captain-adventure.com/',
   },
 }
