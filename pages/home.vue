@@ -22,7 +22,9 @@
                 Testimonial Customer
               </h1>
             </div>
-            <div class="testimoni-body flex items-center py-6">
+            <div
+              class="testimoni-body grid md:grid-cols-1 lg:grid-cols-3 gap-4 py-6"
+            >
               <div class="hidden lg:inline-flex image-wrapper lg:mr-4">
                 <img
                   class="lg:w-96 lg:h--28 object-cover"
@@ -30,43 +32,8 @@
                   alt=""
                 />
               </div>
-              <div class="customer-wrapper grid grid-cols-1 gap-4 lg:ml-2">
-                <div
-                  v-for="testimoni in testimonials"
-                  :key="testimoni.id"
-                  class="testimoni-buble max-h-full lg:w-full bg-gray-100 flex p-4"
-                >
-                  <div class="customer-picture mr-4">
-                    <div class="w-20 h-20 rounded-full bg-gray-700">
-                      <img
-                        :src="$config.baseAPIURL + testimoni.image"
-                        alt="img testimoni"
-                        class="w-20 h-20 object-cover rounded-full"
-                      />
-                    </div>
-                  </div>
-                  <div class="customer-detail w-11/12">
-                    <div class="customer-name font-semibold mb-2">
-                      {{ testimoni.name }}
-                    </div>
-                    <div class="customer-quote flex flex-col lg:flex-row">
-                      <span class="mr-2 w-6 h-6 flex-none"
-                        ><img
-                          class="w-6 h-6"
-                          src="~/assets/icons/Icon Testimonial.png"
-                          alt=""
-                      /></span>
-                      <p class="relative top-1 w-56 md:w-11/12 p-2 break-words">
-                        {{ testimoni.testimoni }}
-                      </p>
-                    </div>
-                    <div>
-                      <p class="text-gray-400 ml-2">
-                        - {{ testimoni.position }}
-                      </p>
-                    </div>
-                  </div>
-                </div>
+              <div class="customer-wrapper lg:col-span-2 lg:ml-2">
+                <Testi :testimonials="testimonials" />
               </div>
             </div>
           </div>
