@@ -2,7 +2,7 @@
   <div>
     <Hero :hero="heros" />
 
-    <Program />
+    <ProgramCustom :programs="programs" />
 
     <section class="w-full">
       <div class="container mx-auto">
@@ -153,13 +153,13 @@ export default {
     $getAddress,
   }) {
     const res = await $axios.$get(`${baseAPIURL}v1/landing-page/home`)
-    const { heros, testimonials, contacts, seo } = res.data
+    const { heros, testimonials, contacts, seo, programs } = res.data
     const map = $getMap(contacts)
     const contact = $noMap(contacts)
     const desc = seo.filter((item) => item.key === 'description')[0]
     const title = seo.filter((item) => item.key === 'title')[0]
 
-    return { heros, testimonials, map, contact, desc, title }
+    return { heros, testimonials, map, contact, desc, title, programs }
   },
   head() {
     return {
