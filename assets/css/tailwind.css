@@ -23,6 +23,12 @@ nav * {
   @apply bg-white text-yellow-900 font-bold px-2;
 }
 
+.bg-program {
+  background-image: url('~/assets/images/bg-program-2.jpg');
+  background-size: cover;
+  @apply bg-fixed;
+}
+
 @layer components {
   @responsive {
     .h-screen-80 {
